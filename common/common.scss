@@ -174,7 +174,19 @@ div.ac-wrap {
   border-radius: 4px;
 }
 .d-header {
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.06);
+  position: sticky;
+  top: 0;
+  left: 0;
+  height: 80px;
+  z-index: 10;
+
+  backdrop-filter: saturate(100%) blur(5px);
+  transform: translateZ(0px);
+  border-bottom: 1px solid rgba(155, 97, 39, 0.7);
+
+  @media (prefers-color-scheme: dark) {
+    border-bottom: 1px solid rgba(155, 97, 39, 0.7);
+  }
 }
 
 .d-header-icons .d-icon {
@@ -252,28 +264,7 @@ div.ac-wrap {
 
 html {
   body:not(.no-ember) {
-    background: linear-gradient(
-        0deg,
-        rgba(var(--primary-rgb), 0.075) 0%,
-        rgba(var(--primary-rgb), 0.075) 100%
-      ),
-      linear-gradient(0deg, var(--secondary) 100%, var(--secondary) 100%);
-  }
-  .background-container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100vh;
-    width: 100vw;
-    background: linear-gradient(
-      90deg,
-      var(--tertiary-hover) 0%,
-      var(--tertiary) 100%
-    );
-    clip-path: ellipse(148% 70% at 91% -14%);
-  }
-  body.no-ember .background-container {
-    display: none;
+    background: var(--tertiary);
   }
 }
 
