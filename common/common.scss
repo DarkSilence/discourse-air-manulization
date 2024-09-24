@@ -179,8 +179,7 @@ div.ac-wrap {
   backdrop-filter: saturate(100%) blur(5px);
   transform: translateZ(0px);
   //border-bottom: 1px solid rgba(155, 97, 39, 0.7);
-  //background-color: rgba(var(--header_background), 0.75);
-  background-color: rgba(var(--secondary-rgb), 0.25);
+  background-color: rgba(var(--header_background-rgb), 0.75);
   box-shadow: none;
 
   //@media (prefers-color-scheme: dark) {
