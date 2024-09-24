@@ -11,7 +11,7 @@
     "serialize_topic_excerpts": true
   },
   "color_schemes": {
-    "air-light": {
+    "manulization-light": {
       "primary": "221a14",
       "secondary": "fff8f5",
       "tertiary": "8c4f14",
@@ -23,7 +23,7 @@
       "success": "71bd9f",
       "love": "ff5449"
     },
-    "air-dark": {
+    "manulization-dark": {
       "primary": "efe0d6",
       "secondary": "19120c",
       "tertiary": "ffb77c",
