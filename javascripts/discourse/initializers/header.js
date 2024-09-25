@@ -4,11 +4,10 @@ export default {
   name: 'header-initializer',
 
   initialize() {
-    console.log('initializing header initializer');
     withPluginApi("0.8.14", (api) => {
       api.onPageChange(() => {
         const locale = I18n.currentLocale(); // Get the user's locale
-
+console.log(locale);
         // Define URLs based on the locale
         if (locale === 'ru') {
           Discourse.SiteSettings.hrefMenuLocale = '';
