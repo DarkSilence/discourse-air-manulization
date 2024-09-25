@@ -1,0 +1,21 @@
+en:
+  theme_metadata:
+    description: "Manulization Theme"
+  js:
+    menu:
+      buttons:
+        locale:
+          title: "Switch to English"
+          text: "En"
+        videos:
+          title: "Видео с манулом"
+          text: "Видео"
+        photos:
+          title: "Фото манула"
+          text: "Фото"
+        zoos:
+          title: "Список зоопарков, в которых есть манулы"
+          text: "Зоопарки"
+        map:
+          title: "Карта манулов"
+          text: "Карта манулов"

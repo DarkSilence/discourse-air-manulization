@@ -1,3 +1,21 @@
 en:
   theme_metadata:
     description: "Manulization Theme"
+  js:
+    menu:
+      buttons:
+        locale:
+          title: "Переключиться на Русский"
+          text: "Ru"
+        videos:
+          title: "Videos with manuls"
+          text: "Videos"
+        photos:
+          title: "Photos of manuls"
+          text: "Photos"
+        zoos:
+          title: "List of zoos with Pallas\'s cats"
+          text: "Zoos"
+        map:
+          title: "Map of places where you can find manuls"
+          text: "Manul Map"
