@@ -4,6 +4,7 @@ export default {
   name: 'header-initializer',
 
   initialize() {
+    console.log('initializing header initializer');
     withPluginApi("0.8.14", (api) => {
       api.onPageChange(() => {
         const locale = I18n.currentLocale(); // Get the user's locale
