@@ -1,0 +1,27 @@
+$breakpoints: (
+    compact: 600px,
+    medium: 840px,
+    expanded: 1440px,
+);
+
+$maxWidth: (normal: 980px);
+
+$pageMargins: (
+    compact: 16px,
+    medium: 16px,
+    expanded: 22px,
+    large: 22px,
+);
+
+$fontUi: Montserrat, Helvetica, Arial, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+$fontText: Georgia, "Times New Roman", Times, serif;
+
+
+$listBorder: 24px;
+$listBorderMobile: 12px;
+
+//$color_male: #283593; // indigo-800
+$color_male: #2071CA; // indigo-800
+//$color_female: #C62828; // red-800
+$color_female: #D54B64; // red-800
+$color_undetermined: #4E342E; // brown-800

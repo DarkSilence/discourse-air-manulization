@@ -1,6 +1,76 @@
+@import "includes/mq";
+@import 'includes/constants';
+@import 'includes/mixins';
+
 $headerHeight: 60px;
 $buttonPadding: 16px;
 $searchSurfaceMaxHeight: 80vh;
+
+.page-header__menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: $headerHeight;
+
+    //@include mixins.pageMargins();
+
+    &-block {
+        &-left, &-right {
+            flex: 1;
+            display: flex;
+            align-items: center;
+        }
+
+        &-left {
+            .page-header__menu-button {
+                @include mixins.responsiveGapForList(true,  false, 'padding-left');
+                @include mixins.responsiveGapForList(false,  false, 'padding-right');
+
+                &:first-of-type {
+                    md-ripple {
+                        @include mixins.responsiveGapForList(false, false, 'margin-left');
+                    }
+                }
+            }
+        }
+
+        &-right {
+            justify-content: flex-end;
+
+            .page-header__menu-button {
+                @include mixins.responsiveGapForList(false,  false, 'padding-left');
+                @include mixins.responsiveGapForList(false,  true, 'padding-right');
+
+                &:last-of-type {
+                    md-ripple {
+                        @include mixins.responsiveGapForList(false, false, 'margin-right');
+                    }
+                }
+            }
+        }
+    }
+
+    &-button {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: $headerHeight;
+
+        color: var(--md-sys-color-on-primary);
+        text-decoration: none;
+        text-transform: uppercase;
+        text-align: center;
+        letter-spacing: 0.1px;
+        font-weight: 500;
+
+        &.--active {
+            text-decoration: underline;
+            text-decoration-thickness: 2px;
+            text-underline-offset: 2px;
+        }
+    }
+}
 
 // custom search banner customizations
 .custom-search-banner-wrap {

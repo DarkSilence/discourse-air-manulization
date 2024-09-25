@@ -1,0 +1,424 @@
+@use "sass:map";
+@use "constants";
+@use "mq";
+
+@mixin thinScrollBars() {
+    /* The background-color of the scrollbar cannot be transitioned.
+     To work around this, we set and transition the property
+     of the wrapper and just set the scrollbar to inherit its
+     value. Now, when the the wrapper transitions that property,
+     so does the scrollbar. However, if we set a background-color,
+     this color shows up in the wrapper as well as the scrollbar.
+     Solution: we transition the border-color and add a border-right
+     to the scrollbar that is as large as the viewport. */
+    border-color: transparent;
+    transition: border-color .3s cubic-bezier(.2,0,0,1);
+
+    &:hover {
+        border-color: var(--md-ref-palette-tertiary70);
+    }
+
+    &::-webkit-scrollbar,
+    &::-webkit-scrollbar-corner {
+        border-color: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        /* add border to act as background-color */
+        border-right-style: inset;
+        /* sum viewport dimensions to guarantee border will fill scrollbar */
+        border-right-width: calc(100vw + 100vh);
+        border-radius: 8px;
+        /* inherit border-color to inherit transitions */
+        border-color: inherit;
+
+        &:horizontal:hover {
+            border-color: var(--md-ref-palette-tertiary50);
+        }
+
+        &:horizontal:active {
+            border-color: var(--md-ref-palette-tertiary40);
+        }
+    }
+
+    /* total width */
+    &::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+    }
+
+    /* set button(top and bottom of the scrollbar) */
+    &::-webkit-scrollbar-button {
+        display:none;
+    }
+
+    ///* total width */
+    //&::-webkit-scrollbar {
+    //    background-color: transparent;
+    //    width: 10px;
+    //    height: 10px;
+    //}
+    //
+    ///* background of the scrollbar except button or resizer */
+    //&::-webkit-scrollbar-track {
+    //    background-color: transparent;
+    //}
+    //
+    ///* scrollbar itself */
+    //&::-webkit-scrollbar-thumb {
+    //    transition: background-color .3s cubic-bezier(.2,0,0,1);
+    //
+    //    &:horizontal,
+    //    &:vertical {
+    //        transition: background-color .3s cubic-bezier(.2,0,0,1);
+    //    }
+    //
+    //    background-color: var(--md-ref-palette-tertiary70);
+    //    border-radius: 10px;
+    //    border: 2px solid var(--md-sys-color-on-tertiary);
+    //
+    //    &:horizontal:hover,
+    //    &:vertical:hover {
+    //        background-color: var(--md-ref-palette-tertiary30);
+    //    }
+    //}
+    //
+    ///* set button(top and bottom of the scrollbar) */
+    //&::-webkit-scrollbar-button {
+    //    display:none;
+    //}
+    //
+    //
+    //&:hover {
+    //    &::-webkit-scrollbar-thumb {
+    //        background-color: var(--md-sys-color-tertiary);
+    //    }
+    //}
+}
+
+@mixin setMaxWidth($mode: normal) {
+    @if not map.has-key(constants.$maxWidth, $mode) {
+        @error "Mode #{$mode} is not supported";
+    }
+
+    max-width: map.get(constants.$maxWidth, $mode);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@mixin fontText() {
+    font-family: constants.$fontText;
+}
+
+@mixin fontUi() {
+    font-family: constants.$fontUi;
+}
+
+@mixin responsivePaddings($horizontal: true, $top: false, $bottom: false, $doubleVertical: false, $doubleHorizontal: false) {
+
+    @include mq.mq($until:compact) {
+        $marginHorizontal: map.get(constants.$pageMargins, compact);
+        @if($doubleHorizontal) {
+            $marginHorizontal: $marginHorizontal * 2;
+        }
+        $marginVertical: map.get(constants.$pageMargins, compact);
+        @if($doubleVertical) {
+            $marginVertical: $marginVertical * 2;
+        }
+        @if($horizontal) {
+            padding-left: $marginHorizontal;
+            padding-right: $marginHorizontal;
+        }
+        @if($top) {
+            padding-top: $marginVertical;
+        }
+        @if($bottom) {
+            padding-bottom: $marginVertical;
+        }
+    }
+
+    @include mq.mq($from:compact, $until:medium) {
+        $marginHorizontal: map.get(constants.$pageMargins, medium);
+        @if($doubleHorizontal) {
+            $marginHorizontal: $marginHorizontal * 2;
+        }
+        $marginVertical: map.get(constants.$pageMargins, medium);
+        @if($doubleVertical) {
+            $marginVertical: $marginVertical * 2;
+        }
+        @if($horizontal) {
+            padding-left: $marginHorizontal;
+            padding-right: $marginHorizontal;
+        }
+        @if($top) {
+            padding-top: $marginVertical;
+        }
+        @if($bottom) {
+            padding-bottom: $marginVertical;
+        }
+    }
+
+    @include mq.mq($from:medium, $until:expanded) {
+        $marginHorizontal: map.get(constants.$pageMargins, expanded);
+        @if($doubleHorizontal) {
+            $marginHorizontal: $marginHorizontal * 2;
+        }
+        $marginVertical: map.get(constants.$pageMargins, expanded);
+        @if($doubleVertical) {
+            $marginVertical: $marginVertical * 2;
+        }
+        @if($horizontal) {
+            padding-left: $marginHorizontal;
+            padding-right: $marginHorizontal;
+        }
+        @if($top) {
+            padding-top: $marginVertical;
+        }
+        @if($bottom) {
+            padding-bottom: $marginVertical;
+        }
+    }
+
+    @include mq.mq($from:expanded) {
+        $marginHorizontal: map.get(constants.$pageMargins, large);
+        @if($doubleHorizontal) {
+            $marginHorizontal: $marginHorizontal * 2;
+        }
+        $marginVertical: map.get(constants.$pageMargins, large);
+        @if($doubleVertical) {
+            $marginVertical: $marginVertical * 2;
+        }
+        @if($horizontal) {
+            padding-left: $marginHorizontal;
+            padding-right: $marginHorizontal;
+        }
+        @if($top) {
+            padding-top: $marginVertical;
+        }
+        @if($bottom) {
+            padding-bottom: $marginVertical;
+        }
+    }
+}
+
+@mixin pageMargins() {
+    @include mq.mq($until:compact) {
+        margin-left: map.get(constants.$pageMargins, compact);
+        margin-right: map.get(constants.$pageMargins, compact);
+    }
+
+    @include mq.mq($from:compact, $until:medium) {
+        margin-left: map.get(constants.$pageMargins, medium);
+        margin-right: map.get(constants.$pageMargins, medium);
+    }
+
+    @include mq.mq($from:medium, $until:expanded) {
+        margin-left: map.get(constants.$pageMargins, expanded);
+        margin-right: map.get(constants.$pageMargins, expanded);
+    }
+
+    @include mq.mq($from:expanded) {
+        margin-left: map.get(constants.$pageMargins, large);
+        margin-right: map.get(constants.$pageMargins, large);
+    }
+}
+
+@mixin applyGapForAttributes($marginName, $multiplier, $attributes...) {
+    @for $i from 0 to length($attributes) {
+        #{nth($attributes, $i + 1)}: map.get(constants.$pageMargins, $marginName) * $multiplier;
+    }
+}
+
+@mixin responsiveGapForListForBreakpoint($fullFirst, $fullLast, $from, $until, $marginName, $attributes...) {
+    @include mq.mq($from, $until) {
+        @include applyGapForAttributes($marginName, 0.5, $attributes);
+
+        @if($fullFirst) {
+            &:first-of-type {
+                @include applyGapForAttributes($marginName, 1, $attributes);
+            }
+        }
+        @if($fullLast) {
+            &:last-of-type {
+                @include applyGapForAttributes($marginName, 1, $attributes);
+            }
+        }
+    }
+}
+
+@mixin responsiveGapForList($fullFirst, $fullLast, $attributes...) {
+    @include responsiveGapForListForBreakpoint($fullFirst, $fullLast, false, compact, compact, $attributes);
+    @include responsiveGapForListForBreakpoint($fullFirst, $fullLast, compact, medium, medium, $attributes);
+    @include responsiveGapForListForBreakpoint($fullFirst, $fullLast, medium, expanded, expanded, $attributes);
+    @include responsiveGapForListForBreakpoint($fullFirst, $fullLast, expanded, false, large, $attributes);
+}
+
+@mixin responsiveBorderRadius() {
+    & {
+        -webkit-tap-highlight-color: transparent;
+        transition: border-radius .3s cubic-bezier(.2,0,0,1), background-color .3s cubic-bezier(.2,0,0,1), outline .3s cubic-bezier(.2,0,0,1);
+    }
+
+    @include mq.mq($until: medium) {
+        & {
+            border-radius: constants.$listBorderMobile;
+        }
+
+        &:active {
+            border-radius: constants.$listBorderMobile * 2;
+        }
+    }
+
+    @include mq.mq($from: medium) {
+        & {
+            border-radius: constants.$listBorder;
+            }
+
+        &:active {
+            border-radius: constants.$listBorder * 2;
+        }
+    }
+
+    &:focus {
+        outline: 2px solid var(--md-sys-color-on-surface);
+    }
+}
+
+@mixin staticBorderRadius() {
+    & {
+        -webkit-tap-highlight-color: transparent;
+        transition: border-radius .3s cubic-bezier(.2,0,0,1), background-color .3s cubic-bezier(.2,0,0,1), outline .3s cubic-bezier(.2,0,0,1);
+
+        border-radius: constants.$listBorder;
+    }
+
+    &:active {
+        border-radius: constants.$listBorder * 2;
+    }
+
+    &:focus {
+        outline: 2px solid var(--md-sys-color-on-surface);
+    }
+}
+
+@mixin responsiveGap($attributes...) {
+    @include mq.mq($until: compact) {
+        @for $i from 0 to length($attributes) {
+            #{nth($attributes, $i + 1)}: map.get(constants.$pageMargins, compact);
+        }
+    }
+
+    @include mq.mq($from: compact, $until: medium) {
+        @for $i from 0 to length($attributes) {
+            #{nth($attributes, $i + 1)}: map.get(constants.$pageMargins, medium);
+        }
+    }
+
+    @include mq.mq($from: medium, $until: expanded) {
+        @for $i from 0 to length($attributes) {
+            #{nth($attributes, $i + 1)}: map.get(constants.$pageMargins, expanded);
+        }
+    }
+
+    @include mq.mq($from: expanded) {
+        @for $i from 0 to length($attributes) {
+            #{nth($attributes, $i + 1)}: map.get(constants.$pageMargins, large);
+        }
+    }
+}
+
+@mixin responsiveDoubleGap($attributes...) {
+    @include mq.mq($until: compact) {
+        @for $i from 0 to length($attributes) {
+            #{nth($attributes, $i + 1)}: map.get(constants.$pageMargins, compact) * 2;
+        }
+    }
+
+    @include mq.mq($from: compact, $until: medium) {
+        @for $i from 0 to length($attributes) {
+            #{nth($attributes, $i + 1)}: map.get(constants.$pageMargins, medium) * 2;
+        }
+    }
+
+    @include mq.mq($from: medium, $until: expanded) {
+        @for $i from 0 to length($attributes) {
+            #{nth($attributes, $i + 1)}: map.get(constants.$pageMargins, expanded) * 2;
+        }
+    }
+
+    @include mq.mq($from: expanded) {
+        @for $i from 0 to length($attributes) {
+            #{nth($attributes, $i + 1)}: map.get(constants.$pageMargins, large) * 2;
+        }
+    }
+}
+
+@mixin applyMqSet($set, $attributes...) {
+    @include mq.mq($until: compact) {
+        @for $i from 0 to length($attributes) {
+            #{nth($attributes, $i + 1)}: map.get($set, compact);
+        }
+    }
+
+    @include mq.mq($from: compact, $until: medium) {
+        @for $i from 0 to length($attributes) {
+            #{nth($attributes, $i + 1)}: map.get($set, medium);
+        }
+    }
+
+    @include mq.mq($from: medium, $until: expanded) {
+        @for $i from 0 to length($attributes) {
+            #{nth($attributes, $i + 1)}: map.get($set, expanded);
+        }
+    }
+
+    @include mq.mq($from: expanded) {
+        @for $i from 0 to length($attributes) {
+            #{nth($attributes, $i + 1)}: map.get($set, large);
+        }
+    }
+}
+
+@mixin colorizeLinks(
+    $linkColor: --md-ref-palette-tertiary40,
+    $linkColorDark: --md-ref-palette-tertiary80,
+    $visitedColor: --md-ref-palette-tertiary30,
+    $visitedColorDark: --md-ref-palette-tertiary70,
+    $hoverColor: --md-ref-palette-tertiary50,
+    $hoverColorDark: --md-ref-palette-tertiary90,
+    $activeColor: --md-ref-palette-tertiary50,
+    $activeColorDark: --md-ref-palette-tertiary90
+) {
+    & {
+        color: var($linkColor);
+    }
+
+    &:link {
+        color: var($linkColor);
+
+        @media (prefers-color-scheme: dark) {
+            color: var($linkColorDark);
+        }
+    }
+    &:visited {
+        color: var($visitedColor);
+
+        @media (prefers-color-scheme: dark) {
+            color: var($visitedColorDark);
+        }
+    }
+    &:hover {
+        color: var($hoverColor);
+
+        @media (prefers-color-scheme: dark) {
+            color: var($hoverColorDark);
+        }
+    }
+    &:active {
+        color: var($activeColor);
+
+        @media (prefers-color-scheme: dark) {
+            color: var($activeColorDark);
+        }
+    }
+}

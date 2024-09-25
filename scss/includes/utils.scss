@@ -1,0 +1,36 @@
+@use "mq";
+
+.--desktop {
+    @include mq.mq($until: medium) {
+        display: none !important;
+    }
+}
+
+.--mobile {
+    @include mq.mq($from: medium) {
+        display: none !important;
+    }
+}
+
+.--expanded-only {
+    @include mq.mq($until: expanded) {
+        display: none !important;
+    }
+}
+
+.--expanded-upto {
+    @include mq.mq($from: expanded) {
+        display: none !important;
+    }
+}
+
+.--hidden, [hidden] {
+    display: none !important;
+}
+
+[disabled] {
+    opacity: 0.8;
+    pointer-events: none;
+    filter: grayscale(1);
+    user-select: none;
+}
