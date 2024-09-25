@@ -7,15 +7,20 @@ ru:
         locale:
           title: "Switch to English"
           text: "En"
+          href: "https://manulization.com/"
         videos:
           title: "Видео с манулом"
           text: "Видео"
+          href: "https://manulization.ru/manul-videos/"
         photos:
           title: "Фото манула"
           text: "Фото"
+          href: "https://manulization.ru/manul-photos/"
         zoos:
           title: "Список зоопарков, в которых есть манулы"
           text: "Зоопарки"
+          href: "https://manulization.ru/zoos"
         map:
           title: "Карта манулов"
           text: "Карта манулов"
+          href: "https://manulization.ru/map"

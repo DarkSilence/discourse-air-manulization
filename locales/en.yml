@@ -7,15 +7,20 @@ en:
         locale:
           title: "Переключиться на Русский"
           text: "Ru"
+          href: "https://manulization.ru/"
         videos:
           title: "Videos with manuls"
           text: "Videos"
+          href: "https://manulization.com/manul-videos/"
         photos:
           title: "Photos of manuls"
           text: "Photos"
+          href: "https://manulization.com/manul-photos/"
         zoos:
           title: "List of zoos with Pallas's cats"
           text: "Zoos"
+          href: "https://manulization.com/zoos"
         map:
           title: "Map of places where you can find manuls"
           text: "Manul Map"
+          href: "https://manulization.com/map"
