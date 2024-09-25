@@ -23,12 +23,12 @@ $searchSurfaceMaxHeight: 80vh;
 
         &-left {
             .page-header__menu-button {
-                @include mixins.responsiveGapForList(true,  false, 'padding-left');
-                @include mixins.responsiveGapForList(false,  false, 'padding-right');
+                @include responsiveGapForList(true,  false, 'padding-left');
+                @include responsiveGapForList(false,  false, 'padding-right');
 
                 &:first-of-type {
                     md-ripple {
-                        @include mixins.responsiveGapForList(false, false, 'margin-left');
+                        @include responsiveGapForList(false, false, 'margin-left');
                     }
                 }
             }
@@ -38,12 +38,12 @@ $searchSurfaceMaxHeight: 80vh;
             justify-content: flex-end;
 
             .page-header__menu-button {
-                @include mixins.responsiveGapForList(false,  false, 'padding-left');
-                @include mixins.responsiveGapForList(false,  true, 'padding-right');
+                @include responsiveGapForList(false,  false, 'padding-left');
+                @include responsiveGapForList(false,  true, 'padding-right');
 
                 &:last-of-type {
                     md-ripple {
-                        @include mixins.responsiveGapForList(false, false, 'margin-right');
+                        @include responsiveGapForList(false, false, 'margin-right');
                     }
                 }
             }
