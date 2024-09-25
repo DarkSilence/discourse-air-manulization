@@ -1,6 +1,6 @@
-@use "../scss/mq";
-@use '../scss/constants';
-@use '../scss/mixins';
+@import "includes/mq";
+@import 'includes/constants';
+@import 'includes/mixins';
 
 $headerHeight: 60px;
 $buttonPadding: 16px;
