@@ -1,4 +1,12 @@
+@import "includes/breakpoints";
+@import "includes/mq";
+@import 'includes/constants';
+@import 'includes/mixins';
+
 @import "chat-mobile";
+
+@import "theme/icons.scss";
+@import "theme/theme.css";
 
 .custom-search-banner-wrap {
   h1 {

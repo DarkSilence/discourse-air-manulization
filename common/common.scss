@@ -1,76 +1,216 @@
+@import "sass:math";
 @import "includes/breakpoints";
 @import "includes/mq";
 @import 'includes/constants';
 @import 'includes/mixins';
+@import "theme/icons.scss";
+@import "theme/theme.css";
 
 $headerHeight: 60px;
 $buttonPadding: 16px;
 $searchSurfaceMaxHeight: 80vh;
 
-.page-header__menu {
+.page-header {
+  a {
+    @include colorizeLinks(
+                    --md-sys-color-on-primary,
+                    --md-sys-color-on-primary,
+                    --md-sys-color-on-primary,
+                    --md-sys-color-on-primary,
+                    --md-sys-color-on-primary,
+                    --md-sys-color-on-primary,
+                    --md-sys-color-on-primary,
+                    --md-sys-color-on-primary,
+    );
+  }
+
+  &__logo {
+    &-link {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 44px + $buttonPadding * 4;
+      height: $headerHeight;
+      border-radius: 20%/100%;
+    }
+
+    @include mq($until: medium) {
+      width: 38px;
+      height: 38px;
+    }
+  }
+
+
+  &__menu {
     display: flex;
     align-items: center;
     justify-content: space-between;
     height: $headerHeight;
 
-    //@include mixins.pageMargins();
+    //@include pageMargins();
 
     &-block {
-        &-left, &-right {
-            flex: 1;
-            display: flex;
-            align-items: center;
-        }
+      &-left, &-right {
+        flex: 1;
+        display: flex;
+        align-items: center;
+      }
 
-        &-left {
-            .page-header__menu-button {
-                @include responsiveGapForList(true,  false, 'padding-left');
-                @include responsiveGapForList(false,  false, 'padding-right');
+      &-left {
+        .page-header__menu-button {
+          @include responsiveGapForList(true, false, 'padding-left');
+          @include responsiveGapForList(false, false, 'padding-right');
 
-                &:first-of-type {
-                    md-ripple {
-                        @include responsiveGapForList(false, false, 'margin-left');
-                    }
-                }
+          &:first-of-type {
+            md-ripple {
+              @include responsiveGapForList(false, false, 'margin-left');
             }
+          }
         }
+      }
 
-        &-right {
-            justify-content: flex-end;
+      &-right {
+        justify-content: flex-end;
 
-            .page-header__menu-button {
-                @include responsiveGapForList(false,  false, 'padding-left');
-                @include responsiveGapForList(false,  true, 'padding-right');
+        .page-header__menu-button {
+          @include responsiveGapForList(false, false, 'padding-left');
+          @include responsiveGapForList(false, true, 'padding-right');
 
-                &:last-of-type {
-                    md-ripple {
-                        @include responsiveGapForList(false, false, 'margin-right');
-                    }
-                }
+          &:last-of-type {
+            md-ripple {
+              @include responsiveGapForList(false, false, 'margin-right');
             }
+          }
         }
+      }
     }
 
     &-button {
-        position: relative;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: $headerHeight;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: $headerHeight;
 
-        color: var(--md-sys-color-on-primary);
-        text-decoration: none;
-        text-transform: uppercase;
-        text-align: center;
-        letter-spacing: 0.1px;
-        font-weight: 500;
+      color: var(--md-sys-color-on-primary);
+      text-decoration: none;
+      text-transform: uppercase;
+      text-align: center;
+      letter-spacing: 0.1px;
+      font-weight: 500;
 
-        &.--active {
-            text-decoration: underline;
-            text-decoration-thickness: 2px;
-            text-underline-offset: 2px;
-        }
+      &.--active {
+        text-decoration: underline;
+        text-decoration-thickness: 2px;
+        text-underline-offset: 2px;
+      }
     }
+  }
+
+  &__search {
+    &-surface {
+      overflow: hidden;
+      position: fixed;
+      left: 0;
+      top: $headerHeight;
+      right: 0;
+      height: 0;
+      max-height: 0;
+      z-index: 2;
+
+      border-radius: 0 0 32px 32px;
+
+      background-color: transparent;
+      color: var(--md-sys-color-on-surface);
+      visibility: hidden;
+      //opacity: 0;
+      transition: max-height 0.6s cubic-bezier(.2,0,0,1), background-color 0.6s cubic-bezier(.2,0,0,1), visibility 0ms cubic-bezier(.2,0,0,1) 0.6s;
+
+      a {
+        @include colorizeLinks();
+      }
+
+      &__visible {
+        background-color: var(--md-sys-color-surface-container-highest);
+        visibility: visible;
+        //opacity: 1;
+        height: auto;
+        max-height: $searchSurfaceMaxHeight;
+        transition-delay: 0ms;
+      }
+
+      md-outlined-text-field {
+        width: 100%;
+      }
+    }
+
+    &-container {
+      padding-top: $headerHeight;
+      padding-bottom: 0;
+      display: flex;
+      flex-direction: column;
+      max-height: $searchSurfaceMaxHeight;
+
+      &__hasResults {
+        .page-header__search-input-container {
+          margin-bottom: div($headerHeight, 2);
+        }
+      }
+    }
+
+    &-results-container {
+      //margin-top: div($headerHeight, 2);
+
+      display: flex;
+      flex-direction: column;
+      max-height: calc($searchSurfaceMaxHeight - div($headerHeight, 2) - 61px);
+      overflow-y: auto;
+
+      @include thinScrollBars();
+
+      .animal-link {
+        text-decoration: underline;
+      }
+    }
+
+    &-input-container {
+      margin-bottom: $headerHeight;
+    }
+
+    &-results-header {
+      margin: 0 0 div($headerHeight, 8);
+    }
+
+    &-results-list {
+      list-style: none;
+      padding-inline-start: 0;
+
+      &-element {
+        margin-bottom: 0.5em;
+      }
+
+      .image-gallery_slide-preview {
+        @include mq($until: medium) {
+          width: min(calc(div(628px, 3)), calc((100vw - 64px - 8px) / 3));
+          height: min(calc(div(628px, 3)), calc((100vw - 64px - 8px) / 3));
+        }
+        @include mq($from: medium) {
+          width: min(calc(div(604px, 3)), calc((100vw - 64px - 8px) / 3));
+          height: min(calc(div(604px, 3)), calc((100vw - 64px - 8px) / 3));
+        }
+      }
+
+      .image-gallery_index {
+        margin-bottom: 1em;
+      }
+
+      .embedded-video-list {
+        margin-bottom: 1em;
+        grid-template-columns: 1fr 1fr !important;
+      }
+    }
+  }
 }
 
 // custom search banner customizations
@@ -249,17 +389,12 @@ div.ac-wrap {
   border-radius: 4px;
 }
 .d-header {
-  height: 80px;
+  height: $headerHeight;
 
   backdrop-filter: saturate(100%) blur(5px);
   transform: translateZ(0px);
-  //border-bottom: 1px solid rgba(155, 97, 39, 0.7);
   background-color: rgba(var(--header_background-rgb), 0.75);
   box-shadow: none;
-
-  //@media (prefers-color-scheme: dark) {
-  //  border-bottom: 1px solid rgba(155, 97, 39, 0.7);
-  //}
 }
 
 .d-header-mode {
@@ -334,9 +469,9 @@ div.ac-wrap {
 // graceful ish style
 @mixin box-shadow($value: 0px) {
   box-shadow: 0 24px 40px rgba(0, 0, 0, 0.07),
-    0 10.8529px 24.1177px rgba(0, 0, 0, 0.0456112),
-    0 4.50776px 10.0172px rgba(0, 0, 0, 0.035),
-    0 1.63037px 3.62304px rgba(0, 0, 0, 0.0243888);
+  0 10.8529px 24.1177px rgba(0, 0, 0, 0.0456112),
+  0 4.50776px 10.0172px rgba(0, 0, 0, 0.035),
+  0 1.63037px 3.62304px rgba(0, 0, 0, 0.0243888);
 }
 
 html {
@@ -597,9 +732,9 @@ html body #main-outlet {
   border-radius: 1em;
   padding: 3em 3em 5%;
   box-shadow: 0 24px 40px rgba(0, 0, 0, 0.07),
-    0 10.8529px 24.1177px rgba(0, 0, 0, 0.0456112),
-    0 4.50776px 10.0172px rgba(0, 0, 0, 0.035),
-    0 1.63037px 3.62304px rgba(0, 0, 0, 0.0243888);
+  0 10.8529px 24.1177px rgba(0, 0, 0, 0.0456112),
+  0 4.50776px 10.0172px rgba(0, 0, 0, 0.035),
+  0 1.63037px 3.62304px rgba(0, 0, 0, 0.0243888);
   z-index: 1;
   position: relative;
 }
@@ -610,9 +745,9 @@ html body #main-outlet {
   }
   &::before {
     background: linear-gradient(
-      90deg,
-      var(--tertiary-hover) 0%,
-      var(--tertiary) 100%
+                    90deg,
+                    var(--tertiary-hover) 0%,
+                    var(--tertiary) 100%
     );
     clip-path: ellipse(148% 70% at 91% -14%);
     content: "";

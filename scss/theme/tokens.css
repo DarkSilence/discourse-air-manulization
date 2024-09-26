@@ -1,0 +1,327 @@
+:root {
+    --md-source: #77502F;
+    /* primary */
+    --md-ref-palette-primary0: #000000;
+    --md-ref-palette-primary5: #1F0C00;
+    --md-ref-palette-primary10: #2E1500;
+    --md-ref-palette-primary20: #4D2600;
+    --md-ref-palette-primary25: #5D3000;
+    --md-ref-palette-primary30: #6E3900;
+    --md-ref-palette-primary35: #7D4406;
+    --md-ref-palette-primary40: #8C4F14;
+    --md-ref-palette-primary50: #A9672B;
+    --md-ref-palette-primary60: #C78042;
+    --md-ref-palette-primary70: #E69A59;
+    --md-ref-palette-primary80: #FFB77C;
+    --md-ref-palette-primary90: #FFDCC3;
+    --md-ref-palette-primary95: #FFEDE2;
+    --md-ref-palette-primary98: #FFF8F5;
+    --md-ref-palette-primary99: #FFFBFF;
+    --md-ref-palette-primary100: #FFFFFF;
+    /* secondary */
+    --md-ref-palette-secondary0: #000000;
+    --md-ref-palette-secondary5: #1E0D01;
+    --md-ref-palette-secondary10: #2A1707;
+    --md-ref-palette-secondary20: #412C1A;
+    --md-ref-palette-secondary25: #4E3624;
+    --md-ref-palette-secondary30: #5A422E;
+    --md-ref-palette-secondary35: #674D39;
+    --md-ref-palette-secondary40: #745944;
+    --md-ref-palette-secondary50: #8F715B;
+    --md-ref-palette-secondary60: #AA8B73;
+    --md-ref-palette-secondary70: #C6A58C;
+    --md-ref-palette-secondary80: #E3C0A6;
+    --md-ref-palette-secondary90: #FFDCC3;
+    --md-ref-palette-secondary95: #FFEDE2;
+    --md-ref-palette-secondary98: #FFF8F5;
+    --md-ref-palette-secondary99: #FFFBFF;
+    --md-ref-palette-secondary100: #FFFFFF;
+    /* tertiary */
+    --md-ref-palette-tertiary0: #000000;
+    --md-ref-palette-tertiary5: #0F1300;
+    --md-ref-palette-tertiary10: #191E00;
+    --md-ref-palette-tertiary20: #2E330D;
+    --md-ref-palette-tertiary25: #393E17;
+    --md-ref-palette-tertiary30: #444A21;
+    --md-ref-palette-tertiary35: #50562C;
+    --md-ref-palette-tertiary40: #5C6237;
+    --md-ref-palette-tertiary50: #757B4D;
+    --md-ref-palette-tertiary60: #8E9565;
+    --md-ref-palette-tertiary70: #A9AF7D;
+    --md-ref-palette-tertiary80: #C5CB96;
+    --md-ref-palette-tertiary90: #E1E7B1;
+    --md-ref-palette-tertiary95: #EFF5BE;
+    --md-ref-palette-tertiary98: #F8FEC6;
+    --md-ref-palette-tertiary99: #FDFFDB;
+    --md-ref-palette-tertiary100: #FFFFFF;
+    /* error */
+    --md-ref-palette-error0: #000000;
+    --md-ref-palette-error5: #2D0001;
+    --md-ref-palette-error10: #410002;
+    --md-ref-palette-error20: #690005;
+    --md-ref-palette-error25: #7E0007;
+    --md-ref-palette-error30: #93000A;
+    --md-ref-palette-error35: #A80710;
+    --md-ref-palette-error40: #BA1A1A;
+    --md-ref-palette-error50: #DE3730;
+    --md-ref-palette-error60: #FF5449;
+    --md-ref-palette-error70: #FF897D;
+    --md-ref-palette-error80: #FFB4AB;
+    --md-ref-palette-error90: #FFDAD6;
+    --md-ref-palette-error95: #FFEDEA;
+    --md-ref-palette-error98: #FFF8F7;
+    --md-ref-palette-error99: #FFFBFF;
+    --md-ref-palette-error100: #FFFFFF;
+    /* neutral */
+    --md-ref-palette-neutral0: #000000;
+    --md-ref-palette-neutral5: #170F0A;
+    --md-ref-palette-neutral10: #221A14;
+    --md-ref-palette-neutral20: #382F28;
+    --md-ref-palette-neutral25: #433A33;
+    --md-ref-palette-neutral30: #4F453E;
+    --md-ref-palette-neutral35: #5B5049;
+    --md-ref-palette-neutral40: #675C55;
+    --md-ref-palette-neutral50: #81756D;
+    --md-ref-palette-neutral60: #9B8E86;
+    --md-ref-palette-neutral70: #B7A9A0;
+    --md-ref-palette-neutral80: #D3C4BA;
+    --md-ref-palette-neutral90: #EFE0D6;
+    --md-ref-palette-neutral95: #FEEEE4;
+    --md-ref-palette-neutral98: #FFF8F5;
+    --md-ref-palette-neutral99: #FFFBFF;
+    --md-ref-palette-neutral100: #FFFFFF;
+    /* neutral-variant */
+    --md-ref-palette-neutral-variant0: #000000;
+    --md-ref-palette-neutral-variant5: #180F08;
+    --md-ref-palette-neutral-variant10: #241A12;
+    --md-ref-palette-neutral-variant20: #3A2E25;
+    --md-ref-palette-neutral-variant25: #453930;
+    --md-ref-palette-neutral-variant30: #51443B;
+    --md-ref-palette-neutral-variant35: #5D5046;
+    --md-ref-palette-neutral-variant40: #6A5C51;
+    --md-ref-palette-neutral-variant50: #847469;
+    --md-ref-palette-neutral-variant60: #9E8E82;
+    --md-ref-palette-neutral-variant70: #BAA89C;
+    --md-ref-palette-neutral-variant80: #D6C3B6;
+    --md-ref-palette-neutral-variant90: #F3DFD2;
+    --md-ref-palette-neutral-variant95: #FFEDE2;
+    --md-ref-palette-neutral-variant98: #FFF8F5;
+    --md-ref-palette-neutral-variant99: #FFFBFF;
+    --md-ref-palette-neutral-variant100: #FFFFFF;
+    /* light */
+    --md-sys-color-primary-light: #8C4F14;
+    --md-sys-color-on-primary-light: #FFFFFF;
+    --md-sys-color-primary-container-light: #FFDCC3;
+    --md-sys-color-on-primary-container-light: #2E1500;
+    --md-sys-color-primary-fixed-light: #FFDCC3;
+    --md-sys-color-on-primary-fixed-light: #2E1500;
+    --md-sys-color-primary-fixed-dim-light: #FFB77C;
+    --md-sys-color-on-primary-fixed-variant-light: #6E3900;
+    --md-sys-color-secondary-light: #745944;
+    --md-sys-color-on-secondary-light: #FFFFFF;
+    --md-sys-color-secondary-container-light: #FFDCC3;
+    --md-sys-color-on-secondary-container-light: #2A1707;
+    --md-sys-color-secondary-fixed-light: #FFDCC3;
+    --md-sys-color-on-secondary-fixed-light: #2A1707;
+    --md-sys-color-secondary-fixed-dim-light: #E3C0A6;
+    --md-sys-color-on-secondary-fixed-variant-light: #5A422E;
+    --md-sys-color-tertiary-light: #5C6237;
+    --md-sys-color-on-tertiary-light: #FFFFFF;
+    --md-sys-color-tertiary-container-light: #E1E7B1;
+    --md-sys-color-on-tertiary-container-light: #191E00;
+    --md-sys-color-tertiary-fixed-light: #E1E7B1;
+    --md-sys-color-on-tertiary-fixed-light: #191E00;
+    --md-sys-color-tertiary-fixed-dim-light: #C5CB96;
+    --md-sys-color-on-tertiary-fixed-variant-light: #444A21;
+    --md-sys-color-error-light: #BA1A1A;
+    --md-sys-color-on-error-light: #FFFFFF;
+    --md-sys-color-error-container-light: #FFDAD6;
+    --md-sys-color-on-error-container-light: #410002;
+    --md-sys-color-outline-light: #817267;
+    --md-sys-color-background-light: #FFF8F5;
+    --md-sys-color-on-background-light: #221A14;
+    --md-sys-color-surface-light: #FFF8F5;
+    --md-sys-color-on-surface-light: #221A14;
+    --md-sys-color-surface-variant-light: #F3DFD2;
+    --md-sys-color-on-surface-variant-light: #51443B;
+    --md-sys-color-inverse-surface-light: #382F28;
+    --md-sys-color-inverse-on-surface-light: #FEEEE4;
+    --md-sys-color-inverse-primary-light: #FFB77C;
+    --md-sys-color-shadow-light: #000000;
+    --md-sys-color-surface-tint-light: #8C4F14;
+    --md-sys-color-outline-variant-light: #D6C3B6;
+    --md-sys-color-scrim-light: #000000;
+    --md-sys-color-surface-container-highest-light: #EFE0D6;
+    --md-sys-color-surface-container-high-light: #F5E5DB;
+    --md-sys-color-surface-container-light: #FBEBE1;
+    --md-sys-color-surface-container-low-light: #FFF1E9;
+    --md-sys-color-surface-container-lowest-light: #FFFFFF;
+    --md-sys-color-surface-bright-light: #FFF8F5;
+    --md-sys-color-surface-dim-light: #E7D7CD;
+    /* dark */
+    --md-sys-color-primary-dark: #FFB77C;
+    --md-sys-color-on-primary-dark: #4D2600;
+    --md-sys-color-primary-container-dark: #6E3900;
+    --md-sys-color-on-primary-container-dark: #FFDCC3;
+    --md-sys-color-primary-fixed-dark: #FFDCC3;
+    --md-sys-color-on-primary-fixed-dark: #2E1500;
+    --md-sys-color-primary-fixed-dim-dark: #FFB77C;
+    --md-sys-color-on-primary-fixed-variant-dark: #6E3900;
+    --md-sys-color-secondary-dark: #E3C0A6;
+    --md-sys-color-on-secondary-dark: #412C1A;
+    --md-sys-color-secondary-container-dark: #5A422E;
+    --md-sys-color-on-secondary-container-dark: #FFDCC3;
+    --md-sys-color-secondary-fixed-dark: #FFDCC3;
+    --md-sys-color-on-secondary-fixed-dark: #2A1707;
+    --md-sys-color-secondary-fixed-dim-dark: #E3C0A6;
+    --md-sys-color-on-secondary-fixed-variant-dark: #5A422E;
+    --md-sys-color-tertiary-dark: #C5CB96;
+    --md-sys-color-on-tertiary-dark: #2E330D;
+    --md-sys-color-tertiary-container-dark: #444A21;
+    --md-sys-color-on-tertiary-container-dark: #E1E7B1;
+    --md-sys-color-tertiary-fixed-dark: #E1E7B1;
+    --md-sys-color-on-tertiary-fixed-dark: #191E00;
+    --md-sys-color-tertiary-fixed-dim-dark: #C5CB96;
+    --md-sys-color-on-tertiary-fixed-variant-dark: #444A21;
+    --md-sys-color-error-dark: #FFB4AB;
+    --md-sys-color-on-error-dark: #690005;
+    --md-sys-color-error-container-dark: #93000A;
+    --md-sys-color-on-error-container-dark: #FFDAD6;
+    --md-sys-color-outline-dark: #817267;
+    --md-sys-color-background-dark: #19120C;
+    --md-sys-color-on-background-dark: #EFE0D6;
+    --md-sys-color-surface-dark: #19120C;
+    --md-sys-color-on-surface-dark: #EFE0D6;
+    --md-sys-color-surface-variant-dark: #51443B;
+    --md-sys-color-on-surface-variant-dark: #D6C3B6;
+    --md-sys-color-inverse-surface-dark: #EFE0D6;
+    --md-sys-color-inverse-on-surface-dark: #382F28;
+    --md-sys-color-inverse-primary-dark: #8C4F14;
+    --md-sys-color-shadow-dark: #000000;
+    --md-sys-color-surface-tint-dark: #FFB77C;
+    --md-sys-color-outline-variant-dark: #51443B;
+    --md-sys-color-scrim-dark: #000000;
+    --md-sys-color-surface-container-highest-dark: #3C332C;
+    --md-sys-color-surface-container-high-dark: #312822;
+    --md-sys-color-surface-container-dark: #261E18;
+    --md-sys-color-surface-container-low-dark: #221A14;
+    --md-sys-color-surface-container-lowest-dark: #140D08;
+    --md-sys-color-surface-bright-dark: #413731;
+    --md-sys-color-surface-dim-dark: #19120C;
+    /* display - large */
+    --md-sys-typescale-display-large-font-family-name: Georgia, "Times New Roman", Times, serif;
+    --md-sys-typescale-display-large-font-family-style: Regular;
+    --md-sys-typescale-display-large-font-weight: 700;
+    --md-sys-typescale-display-large-font-size: 57px;
+    --md-sys-typescale-display-large-line-height: 64px;
+    --md-sys-typescale-display-large-letter-spacing: -0.25px;
+    /* display - medium */
+    --md-sys-typescale-display-medium-font-family-name: Georgia, "Times New Roman", Times, serif;
+    --md-sys-typescale-display-medium-font-family-style: Regular;
+    --md-sys-typescale-display-medium-font-weight: 700;
+    --md-sys-typescale-display-medium-font-size: 45px;
+    --md-sys-typescale-display-medium-line-height: 52px;
+    --md-sys-typescale-display-medium-letter-spacing: 0;
+    /* display - small */
+    --md-sys-typescale-display-small-font-family-name: Georgia, "Times New Roman", Times, serif;
+    --md-sys-typescale-display-small-font-family-style: Regular;
+    --md-sys-typescale-display-small-font-weight: 700;
+    --md-sys-typescale-display-small-font-size: 36px;
+    --md-sys-typescale-display-small-line-height: 44px;
+    --md-sys-typescale-display-small-letter-spacing: 0;
+    /* headline - large */
+    --md-sys-typescale-headline-large-font-family-name: Montserrat, Helvetica, Arial, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    --md-sys-typescale-headline-large-font-family-style: Regular;
+    --md-sys-typescale-headline-large-font-weight: 700;
+    --md-sys-typescale-headline-large-font-size: 32px;
+    --md-sys-typescale-headline-large-line-height: 40px;
+    --md-sys-typescale-headline-large-letter-spacing: 0;
+    /* headline - medium */
+    --md-sys-typescale-headline-medium-font-family-name: Montserrat, Helvetica, Arial, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    --md-sys-typescale-headline-medium-font-family-style: Regular;
+    --md-sys-typescale-headline-medium-font-weight: 400;
+    --md-sys-typescale-headline-medium-font-size: 28px;
+    --md-sys-typescale-headline-medium-line-height: 36px;
+    --md-sys-typescale-headline-medium-letter-spacing: 0;
+    /* headline - small */
+    --md-sys-typescale-headline-small-font-family-name: Montserrat, Helvetica, Arial, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    --md-sys-typescale-headline-small-font-family-style: Regular;
+    --md-sys-typescale-headline-small-font-weight: 400;
+    --md-sys-typescale-headline-small-font-size: 24px;
+    --md-sys-typescale-headline-small-line-height: 32px;
+    --md-sys-typescale-headline-small-letter-spacing: 0;
+    /* body - large */
+    --md-sys-typescale-body-large-font-family-name: Georgia, "Times New Roman", Times, serif;
+    --md-sys-typescale-body-large-font-family-style: Regular;
+    --md-sys-typescale-body-large-font-weight: 400;
+    --md-sys-typescale-body-large-font-size: 18px;
+    --md-sys-typescale-body-large-line-height: 29px;
+    /*noinspection CssNonIntegerLengthInPixels*/
+    --md-sys-typescale-body-large-letter-spacing: 0.1px;
+    /* body - medium */
+    --md-sys-typescale-body-medium-font-family-name: Georgia, "Times New Roman", Times, serif;
+    --md-sys-typescale-body-medium-font-family-style: Regular;
+    --md-sys-typescale-body-medium-font-weight: 400;
+    --md-sys-typescale-body-medium-font-size: 16px;
+    --md-sys-typescale-body-medium-line-height: 24px;
+    /*noinspection CssNonIntegerLengthInPixels*/
+    --md-sys-typescale-body-medium-letter-spacing: 0.50px;
+    /* body - small */
+    --md-sys-typescale-body-small-font-family-name: Georgia, "Times New Roman", Times, serif;
+    --md-sys-typescale-body-small-font-family-style: Regular;
+    --md-sys-typescale-body-small-font-weight: 400;
+    --md-sys-typescale-body-small-font-size: 14px;
+    --md-sys-typescale-body-small-line-height: 20px;
+    /*noinspection CssNonIntegerLengthInPixels*/
+    --md-sys-typescale-body-small-letter-spacing: 0.25px;
+    /* label - large */
+    --md-sys-typescale-label-large-font-family-name: Montserrat, Helvetica, Arial, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    --md-sys-typescale-label-large-font-family-style: Medium;
+    --md-sys-typescale-label-large-font-weight: 500;
+    --md-sys-typescale-label-large-font-size: 14px;
+    --md-sys-typescale-label-large-line-height: 20px;
+    /*noinspection CssNonIntegerLengthInPixels*/
+    --md-sys-typescale-label-large-letter-spacing: 0.10px;
+    /* label - medium */
+    --md-sys-typescale-label-medium-font-family-name: Montserrat, Helvetica, Arial, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    --md-sys-typescale-label-medium-font-family-style: Medium;
+    --md-sys-typescale-label-medium-font-weight: 500;
+    --md-sys-typescale-label-medium-font-size: 12px;
+    --md-sys-typescale-label-medium-line-height: 16px;
+    /*noinspection CssNonIntegerLengthInPixels*/
+    --md-sys-typescale-label-medium-letter-spacing: 0.50px;
+    /* label - small */
+    --md-sys-typescale-label-small-font-family-name: Montserrat, Helvetica, Arial, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    --md-sys-typescale-label-small-font-family-style: Medium;
+    --md-sys-typescale-label-small-font-weight: 500;
+    --md-sys-typescale-label-small-font-size: 11px;
+    --md-sys-typescale-label-small-line-height: 16px;
+    /*noinspection CssNonIntegerLengthInPixels*/
+    --md-sys-typescale-label-small-letter-spacing: 0.50px;
+    /* title - large */
+    --md-sys-typescale-title-large-font-family-name: Montserrat, Helvetica, Arial, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    --md-sys-typescale-title-large-font-family-style: Regular;
+    --md-sys-typescale-title-large-font-weight: 500;
+    --md-sys-typescale-title-large-font-size: 22px;
+    --md-sys-typescale-title-large-line-height: 28px;
+    --md-sys-typescale-title-large-letter-spacing: 0;
+    /* title - medium */
+    --md-sys-typescale-title-medium-font-family-name: Montserrat, Helvetica, Arial, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    --md-sys-typescale-title-medium-font-family-style: Medium;
+    --md-sys-typescale-title-medium-font-weight: 500;
+    --md-sys-typescale-title-medium-font-size: 16px;
+    --md-sys-typescale-title-medium-line-height: 24px;
+    /*noinspection CssNonIntegerLengthInPixels*/
+    --md-sys-typescale-title-medium-letter-spacing: 0.15px;
+    /* title - small */
+    --md-sys-typescale-title-small-font-family-name: Montserrat, Helvetica, Arial, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    --md-sys-typescale-title-small-font-family-style: Medium;
+    --md-sys-typescale-title-small-font-weight: 500;
+    --md-sys-typescale-title-small-font-size: 14px;
+    --md-sys-typescale-title-small-line-height: 20px;
+    /*noinspection CssNonIntegerLengthInPixels*/
+    --md-sys-typescale-title-small-letter-spacing: 0.10px;
+
+    --md-ref-typeface-brand: Montserrat, Helvetica, Arial, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    --md-ref-typeface-plain: Montserrat, Helvetica, Arial, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+}
