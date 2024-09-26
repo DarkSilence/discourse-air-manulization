@@ -8,11 +8,14 @@
   </div>
 </script>
 <script type="text/discourse-plugin" version="0.4">
-  api.decorateWidget('header-icons:before', helper => {
-    return helper.rawHtml(
-      `<a href="{{ theme-i18n 'js.menu.buttons.map.href' }}" title="{{theme-i18n 'js.menu.buttons.map.title'}}" class="page-header__menu-button"><md-ripple></md-ripple>{{theme-i18n 'js.menu.buttons.map.text'}}</a>`
-    );
-  });
+api.decorateWidget('header-icons:before', helper => {
+    return helper.h('li.header-dropdown-toggle', [
+        helper.h('a.icon#latest-button', {
+            href:'https://uskojarukous.fi/latest',
+            title: 'Uusimmat'
+        }, helper.h('i.fa.fa-bolt.d-icon.latest-button-icon')),
+    ]);
+});
 </script>
 <!--<script type="text/x-handlebars" data-template-name="/connectors/before-header-panel/right">-->
 <!--  <div class="page-header__menu-block-right &#45;&#45;desktop">-->
