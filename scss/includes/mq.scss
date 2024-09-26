@@ -1,6 +1,3 @@
-@import 'sass:map';
-@import 'sass:list';
-
 /// Breakpoint list
 ///
 /// Name your breakpoints in a way that creates a ubiquitous language
@@ -73,8 +70,8 @@ $media-type: 'screen';
 ///
 /// @returns {Number} Value in pixels
 @function get-breakpoint-width($name, $breakpoints: $breakpoints) {
-  @if has-key($breakpoints, $name) {
-    @return get($breakpoints, $name);
+  @if map-has-key($breakpoints, $name) {
+    @return map-get($breakpoints, $name);
   } @else {
     @warn "Breakpoint #{$name} wasn't found in $breakpoints.";
     @return null;
@@ -214,15 +211,15 @@ $media-type: 'screen';
 /// @returns {Map} Map sorted by value
 @function _map-sort-by-value($map) {
   $map-sorted: ();
-  $map-keys: keys($map);
-  $map-values: values($map);
+  $map-keys: map-keys($map);
+  $map-values: map-values($map);
   $map-values-sorted: _quick-sort($map-values);
 
   // Reorder key/value pairs based on key values
   @each $value in $map-values-sorted {
     $index: index($map-values, $value);
     $key: nth($map-keys, $index);
-    $map-sorted: merge(
+    $map-sorted: map-merge(
       $map-sorted,
       (
         $key: $value,
@@ -251,7 +248,7 @@ $media-type: 'screen';
   $new-breakpoint: (
     $name: $width,
   );
-  $breakpoints: merge($breakpoints, $new-breakpoint) !global;
+  $breakpoints: map-merge($breakpoints, $new-breakpoint) !global;
   $breakpoints: _map-sort-by-value($breakpoints) !global;
 }
 
