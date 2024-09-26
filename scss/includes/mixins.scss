@@ -1,6 +1,6 @@
-@use "sass:map";
-@use "constants";
-@use "mq";
+@import "sass:map";
+@import "constants";
+@import "mq";
 
 @mixin thinScrollBars() {
     /* The background-color of the scrollbar cannot be transitioned.
@@ -97,31 +97,31 @@
 }
 
 @mixin setMaxWidth($mode: normal) {
-    @if not map.has-key(constants.$maxWidth, $mode) {
+    @if not has-key($maxWidth, $mode) {
         @error "Mode #{$mode} is not supported";
     }
 
-    max-width: map.get(constants.$maxWidth, $mode);
+    max-width: get($maxWidth, $mode);
     margin-left: auto;
     margin-right: auto;
 }
 
 @mixin fontText() {
-    font-family: constants.$fontText;
+    font-family: $fontText;
 }
 
 @mixin fontUi() {
-    font-family: constants.$fontUi;
+    font-family: $fontUi;
 }
 
 @mixin responsivePaddings($horizontal: true, $top: false, $bottom: false, $doubleVertical: false, $doubleHorizontal: false) {
 
-    @include mq.mq($until:compact) {
-        $marginHorizontal: map.get(constants.$pageMargins, compact);
+    @include mq($until:compact) {
+        $marginHorizontal: get($pageMargins, compact);
         @if($doubleHorizontal) {
             $marginHorizontal: $marginHorizontal * 2;
         }
-        $marginVertical: map.get(constants.$pageMargins, compact);
+        $marginVertical: get($pageMargins, compact);
         @if($doubleVertical) {
             $marginVertical: $marginVertical * 2;
         }
@@ -137,12 +137,12 @@
         }
     }
 
-    @include mq.mq($from:compact, $until:medium) {
-        $marginHorizontal: map.get(constants.$pageMargins, medium);
+    @include mq($from:compact, $until:medium) {
+        $marginHorizontal: get($pageMargins, medium);
         @if($doubleHorizontal) {
             $marginHorizontal: $marginHorizontal * 2;
         }
-        $marginVertical: map.get(constants.$pageMargins, medium);
+        $marginVertical: get($pageMargins, medium);
         @if($doubleVertical) {
             $marginVertical: $marginVertical * 2;
         }
@@ -158,12 +158,12 @@
         }
     }
 
-    @include mq.mq($from:medium, $until:expanded) {
-        $marginHorizontal: map.get(constants.$pageMargins, expanded);
+    @include mq($from:medium, $until:expanded) {
+        $marginHorizontal: get($pageMargins, expanded);
         @if($doubleHorizontal) {
             $marginHorizontal: $marginHorizontal * 2;
         }
-        $marginVertical: map.get(constants.$pageMargins, expanded);
+        $marginVertical: get($pageMargins, expanded);
         @if($doubleVertical) {
             $marginVertical: $marginVertical * 2;
         }
@@ -179,12 +179,12 @@
         }
     }
 
-    @include mq.mq($from:expanded) {
-        $marginHorizontal: map.get(constants.$pageMargins, large);
+    @include mq($from:expanded) {
+        $marginHorizontal: get($pageMargins, large);
         @if($doubleHorizontal) {
             $marginHorizontal: $marginHorizontal * 2;
         }
-        $marginVertical: map.get(constants.$pageMargins, large);
+        $marginVertical: get($pageMargins, large);
         @if($doubleVertical) {
             $marginVertical: $marginVertical * 2;
         }
@@ -202,35 +202,35 @@
 }
 
 @mixin pageMargins() {
-    @include mq.mq($until:compact) {
-        margin-left: map.get(constants.$pageMargins, compact);
-        margin-right: map.get(constants.$pageMargins, compact);
+    @include mq($until:compact) {
+        margin-left: get($pageMargins, compact);
+        margin-right: get($pageMargins, compact);
     }
 
-    @include mq.mq($from:compact, $until:medium) {
-        margin-left: map.get(constants.$pageMargins, medium);
-        margin-right: map.get(constants.$pageMargins, medium);
+    @include mq($from:compact, $until:medium) {
+        margin-left: get($pageMargins, medium);
+        margin-right: get($pageMargins, medium);
     }
 
-    @include mq.mq($from:medium, $until:expanded) {
-        margin-left: map.get(constants.$pageMargins, expanded);
-        margin-right: map.get(constants.$pageMargins, expanded);
+    @include mq($from:medium, $until:expanded) {
+        margin-left: get($pageMargins, expanded);
+        margin-right: get($pageMargins, expanded);
     }
 
-    @include mq.mq($from:expanded) {
-        margin-left: map.get(constants.$pageMargins, large);
-        margin-right: map.get(constants.$pageMargins, large);
+    @include mq($from:expanded) {
+        margin-left: get($pageMargins, large);
+        margin-right: get($pageMargins, large);
     }
 }
 
 @mixin applyGapForAttributes($marginName, $multiplier, $attributes...) {
     @for $i from 0 to length($attributes) {
-        #{nth($attributes, $i + 1)}: map.get(constants.$pageMargins, $marginName) * $multiplier;
+        #{nth($attributes, $i + 1)}: get($pageMargins, $marginName) * $multiplier;
     }
 }
 
 @mixin responsiveGapForListForBreakpoint($fullFirst, $fullLast, $from, $until, $marginName, $attributes...) {
-    @include mq.mq($from, $until) {
+    @include mq($from, $until) {
         @include applyGapForAttributes($marginName, 0.5, $attributes);
 
         @if($fullFirst) {
@@ -259,23 +259,23 @@
         transition: border-radius .3s cubic-bezier(.2,0,0,1), background-color .3s cubic-bezier(.2,0,0,1), outline .3s cubic-bezier(.2,0,0,1);
     }
 
-    @include mq.mq($until: medium) {
+    @include mq($until: medium) {
         & {
-            border-radius: constants.$listBorderMobile;
+            border-radius: $listBorderMobile;
         }
 
         &:active {
-            border-radius: constants.$listBorderMobile * 2;
+            border-radius: $listBorderMobile * 2;
         }
     }
 
-    @include mq.mq($from: medium) {
+    @include mq($from: medium) {
         & {
-            border-radius: constants.$listBorder;
+            border-radius: $listBorder;
             }
 
         &:active {
-            border-radius: constants.$listBorder * 2;
+            border-radius: $listBorder * 2;
         }
     }
 
@@ -289,11 +289,11 @@
         -webkit-tap-highlight-color: transparent;
         transition: border-radius .3s cubic-bezier(.2,0,0,1), background-color .3s cubic-bezier(.2,0,0,1), outline .3s cubic-bezier(.2,0,0,1);
 
-        border-radius: constants.$listBorder;
+        border-radius: $listBorder;
     }
 
     &:active {
-        border-radius: constants.$listBorder * 2;
+        border-radius: $listBorder * 2;
     }
 
     &:focus {
@@ -302,79 +302,79 @@
 }
 
 @mixin responsiveGap($attributes...) {
-    @include mq.mq($until: compact) {
+    @include mq($until: compact) {
         @for $i from 0 to length($attributes) {
-            #{nth($attributes, $i + 1)}: map.get(constants.$pageMargins, compact);
+            #{nth($attributes, $i + 1)}: get($pageMargins, compact);
         }
     }
 
-    @include mq.mq($from: compact, $until: medium) {
+    @include mq($from: compact, $until: medium) {
         @for $i from 0 to length($attributes) {
-            #{nth($attributes, $i + 1)}: map.get(constants.$pageMargins, medium);
+            #{nth($attributes, $i + 1)}: get($pageMargins, medium);
         }
     }
 
-    @include mq.mq($from: medium, $until: expanded) {
+    @include mq($from: medium, $until: expanded) {
         @for $i from 0 to length($attributes) {
-            #{nth($attributes, $i + 1)}: map.get(constants.$pageMargins, expanded);
+            #{nth($attributes, $i + 1)}: get($pageMargins, expanded);
         }
     }
 
-    @include mq.mq($from: expanded) {
+    @include mq($from: expanded) {
         @for $i from 0 to length($attributes) {
-            #{nth($attributes, $i + 1)}: map.get(constants.$pageMargins, large);
+            #{nth($attributes, $i + 1)}: get($pageMargins, large);
         }
     }
 }
 
 @mixin responsiveDoubleGap($attributes...) {
-    @include mq.mq($until: compact) {
+    @include mq($until: compact) {
         @for $i from 0 to length($attributes) {
-            #{nth($attributes, $i + 1)}: map.get(constants.$pageMargins, compact) * 2;
+            #{nth($attributes, $i + 1)}: get($pageMargins, compact) * 2;
         }
     }
 
-    @include mq.mq($from: compact, $until: medium) {
+    @include mq($from: compact, $until: medium) {
         @for $i from 0 to length($attributes) {
-            #{nth($attributes, $i + 1)}: map.get(constants.$pageMargins, medium) * 2;
+            #{nth($attributes, $i + 1)}: get($pageMargins, medium) * 2;
         }
     }
 
-    @include mq.mq($from: medium, $until: expanded) {
+    @include mq($from: medium, $until: expanded) {
         @for $i from 0 to length($attributes) {
-            #{nth($attributes, $i + 1)}: map.get(constants.$pageMargins, expanded) * 2;
+            #{nth($attributes, $i + 1)}: get($pageMargins, expanded) * 2;
         }
     }
 
-    @include mq.mq($from: expanded) {
+    @include mq($from: expanded) {
         @for $i from 0 to length($attributes) {
-            #{nth($attributes, $i + 1)}: map.get(constants.$pageMargins, large) * 2;
+            #{nth($attributes, $i + 1)}: get($pageMargins, large) * 2;
         }
     }
 }
 
 @mixin applyMqSet($set, $attributes...) {
-    @include mq.mq($until: compact) {
+    @include mq($until: compact) {
         @for $i from 0 to length($attributes) {
-            #{nth($attributes, $i + 1)}: map.get($set, compact);
+            #{nth($attributes, $i + 1)}: get($set, compact);
         }
     }
 
-    @include mq.mq($from: compact, $until: medium) {
+    @include mq($from: compact, $until: medium) {
         @for $i from 0 to length($attributes) {
-            #{nth($attributes, $i + 1)}: map.get($set, medium);
+            #{nth($attributes, $i + 1)}: get($set, medium);
         }
     }
 
-    @include mq.mq($from: medium, $until: expanded) {
+    @include mq($from: medium, $until: expanded) {
         @for $i from 0 to length($attributes) {
-            #{nth($attributes, $i + 1)}: map.get($set, expanded);
+            #{nth($attributes, $i + 1)}: get($set, expanded);
         }
     }
 
-    @include mq.mq($from: expanded) {
+    @include mq($from: expanded) {
         @for $i from 0 to length($attributes) {
-            #{nth($attributes, $i + 1)}: map.get($set, large);
+            #{nth($attributes, $i + 1)}: get($set, large);
         }
     }
 }

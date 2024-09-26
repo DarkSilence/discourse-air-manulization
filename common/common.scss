@@ -1,0 +1,8 @@
+@import "includes/constants";
+@import "includes/mq";
+@import "includes/mixins";
+@import "includes/utils";
+
+.test {
+  @include responsivePaddings();
+}

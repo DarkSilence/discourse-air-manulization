@@ -1,6 +1,6 @@
-@use 'sass:math';
-@use 'sass:map';
-@use 'sass:list';
+@import 'sass:math';
+@import 'sass:map';
+@import 'sass:list';
 
 /// Breakpoint list
 ///
@@ -11,11 +11,10 @@
 /// @type Map
 /// @link https://github.com/sass-mq/sass-mq#seeing-the-currently-active-breakpoint Full documentation and examples
 $breakpoints: (
-  mobile: 320px,
-  tablet: 740px,
-  desktop: 980px,
-  wide: 1300px,
-) !default;
+  compact: 600px,
+  medium: 840px,
+  expanded: 1440px,
+);
 
 /// Show breakpoints in the top right corner
 ///
@@ -39,7 +38,7 @@ $show-breakpoints: () !default;
 ///
 /// @type String
 /// @link https://github.com/sass-mq/sass-mq#changing-media-type Full documentation and example
-$media-type: all !default;
+$media-type: 'screen';
 
 /// Convert pixels to ems
 ///
@@ -52,15 +51,15 @@ $media-type: all !default;
 /// @returns {Number}
 
 @function px2em($px) {
-  @if math.is-unitless($px) {
+  @if is-unitless($px) {
     @warn "Assuming #{$px} to be in pixels, attempting to convert it into pixels.";
     @return px2em($px * 1px);
   }
   // if $px is compatible with em units, then return value unchanged
-  @if math.compatible($px, 1em) {
+  @if compatible($px, 1em) {
     @return $px;
   }
-  @return math.div($px, 16px) * 1em;
+  @return div($px, 16px) * 1em;
 }
 
 /// Get a breakpoint's width
@@ -75,8 +74,8 @@ $media-type: all !default;
 ///
 /// @returns {Number} Value in pixels
 @function get-breakpoint-width($name, $breakpoints: $breakpoints) {
-  @if map.has-key($breakpoints, $name) {
-    @return map.get($breakpoints, $name);
+  @if has-key($breakpoints, $name) {
+    @return get($breakpoints, $name);
   } @else {
     @warn "Breakpoint #{$name} wasn't found in $breakpoints.";
     @return null;
@@ -191,15 +190,15 @@ $media-type: all !default;
   $large: ();
 
   @if length($list) > 1 {
-    $seed: list.nth($list, math.ceil(math.div(length($list), 2)));
+    $seed: nth($list, ceil(div(length($list), 2)));
 
     @each $item in $list {
       @if ($item == $seed) {
-        $equal: list.append($equal, $item);
+        $equal: append($equal, $item);
       } @else if ($item < $seed) {
-        $less: list.append($less, $item);
+        $less: append($less, $item);
       } @else if ($item > $seed) {
-        $large: list.append($large, $item);
+        $large: append($large, $item);
       }
     }
 
@@ -216,15 +215,15 @@ $media-type: all !default;
 /// @returns {Map} Map sorted by value
 @function _map-sort-by-value($map) {
   $map-sorted: ();
-  $map-keys: map.keys($map);
-  $map-values: map.values($map);
+  $map-keys: keys($map);
+  $map-values: values($map);
   $map-values-sorted: _quick-sort($map-values);
 
   // Reorder key/value pairs based on key values
   @each $value in $map-values-sorted {
     $index: index($map-values, $value);
-    $key: list.nth($map-keys, $index);
-    $map-sorted: map.merge(
+    $key: nth($map-keys, $index);
+    $map-sorted: merge(
       $map-sorted,
       (
         $key: $value,
@@ -233,7 +232,7 @@ $media-type: all !default;
 
     // Unset the value in $map-values to prevent the loop
     // from finding the same index twice
-    $map-values: list.set-nth($map-values, $index, 0);
+    $map-values: set-nth($map-values, $index, 0);
   }
 
   @return $map-sorted;
@@ -253,7 +252,7 @@ $media-type: all !default;
   $new-breakpoint: (
     $name: $width,
   );
-  $breakpoints: map.merge($breakpoints, $new-breakpoint) !global;
+  $breakpoints: merge($breakpoints, $new-breakpoint) !global;
   $breakpoints: _map-sort-by-value($breakpoints) !global;
 }
 
@@ -299,6 +298,6 @@ $media-type: all !default;
   }
 }
 
-@if list.length($show-breakpoints) > 0 {
+@if length($show-breakpoints) > 0 {
   @include show-breakpoints;
 }

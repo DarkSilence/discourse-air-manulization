@@ -1,6 +1,0 @@
-@use "constants";
-
-@use "mq" with (
-    $breakpoints: constants.$breakpoints,
-    $media-type: 'screen',
-);

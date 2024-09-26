@@ -1,25 +1,25 @@
-@use "mq";
+@import "mq";
 
 .--desktop {
-    @include mq.mq($until: medium) {
+    @include mq($until: medium) {
         display: none !important;
     }
 }
 
 .--mobile {
-    @include mq.mq($from: medium) {
+    @include mq($from: medium) {
         display: none !important;
     }
 }
 
 .--expanded-only {
-    @include mq.mq($until: expanded) {
+    @include mq($until: expanded) {
         display: none !important;
     }
 }
 
 .--expanded-upto {
-    @include mq.mq($from: expanded) {
+    @include mq($from: expanded) {
         display: none !important;
     }
 }
