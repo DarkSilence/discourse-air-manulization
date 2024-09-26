@@ -24,3 +24,8 @@ ru:
           title: "Карта манулов"
           text: "Карта манулов"
           href: "https://manulization.ru/map"
+        community:
+          title: "Форум"
+          text: "Форум"
+          href: "https://steppe.manulization.com/"
+
