@@ -7,204 +7,110 @@ $headerHeight: 60px;
 $buttonPadding: 16px;
 $searchSurfaceMaxHeight: 80vh;
 
-.page-header {
+.d-header {
+  &>.wrap {
+    max-width: unset !important;
+    --d-wrap-padding-h: 0;
+  }
+
   a {
     @include colorizeLinks(
-                    --md-sys-color-on-primary,
-                    --md-sys-color-on-primary,
-                    --md-sys-color-on-primary,
-                    --md-sys-color-on-primary,
-                    --md-sys-color-on-primary,
-                    --md-sys-color-on-primary,
-                    --md-sys-color-on-primary,
-                    --md-sys-color-on-primary,
+      --md-sys-color-on-primary,
+      --md-sys-color-on-primary,
+      --md-sys-color-on-primary,
+      --md-sys-color-on-primary,
+      --md-sys-color-on-primary,
+      --md-sys-color-on-primary,
+      --md-sys-color-on-primary,
+      --md-sys-color-on-primary,
     );
   }
 
-  &__logo {
-    &-link {
-      position: relative;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 44px + $buttonPadding * 4;
-      height: $headerHeight;
-      border-radius: 20%/100%;
-    }
-
-    @include mq($until: medium) {
-      width: 38px;
-      height: 38px;
-    }
-  }
-
-
-  &__menu {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: $headerHeight;
-
-    //@include pageMargins();
-
-    &-block {
-      &-left, &-right {
-        flex: 1;
+  .page-header {
+    &__logo {
+      &-link {
+        position: relative;
         display: flex;
         align-items: center;
+        justify-content: center;
+        width: 44px + $buttonPadding * 4;
+        height: $headerHeight;
+        border-radius: 20%/100%;
       }
 
-      &-left {
-        .page-header__menu-button {
-          @include responsiveGapForList(true, false, 'padding-left');
-          @include responsiveGapForList(false, false, 'padding-right');
-
-          &:first-of-type {
-            md-ripple {
-              @include responsiveGapForList(false, false, 'margin-left');
-            }
-          }
-        }
-      }
-
-      &-right {
-        justify-content: flex-end;
-
-        .page-header__menu-button {
-          @include responsiveGapForList(false, false, 'padding-left');
-          @include responsiveGapForList(false, true, 'padding-right');
-
-          &:last-of-type {
-            md-ripple {
-              @include responsiveGapForList(false, false, 'margin-right');
-            }
-          }
-        }
+      @include mq($until: medium) {
+        width: 38px;
+        height: 38px;
       }
     }
 
-    &-button {
-      position: relative;
+    &__menu {
       display: flex;
       align-items: center;
-      justify-content: center;
+      justify-content: space-between;
       height: $headerHeight;
 
-      color: var(--md-sys-color-on-primary);
-      text-decoration: none;
-      text-transform: uppercase;
-      text-align: center;
-      letter-spacing: 0.1px;
-      font-weight: 500;
+      //@include pageMargins();
 
-      &.--active {
-        text-decoration: underline;
-        text-decoration-thickness: 2px;
-        text-underline-offset: 2px;
-      }
-    }
-  }
-
-  &__search {
-    &-surface {
-      overflow: hidden;
-      position: fixed;
-      left: 0;
-      top: $headerHeight;
-      right: 0;
-      height: 0;
-      max-height: 0;
-      z-index: 2;
-
-      border-radius: 0 0 32px 32px;
-
-      background-color: transparent;
-      color: var(--md-sys-color-on-surface);
-      visibility: hidden;
-      //opacity: 0;
-      transition: max-height 0.6s cubic-bezier(.2,0,0,1), background-color 0.6s cubic-bezier(.2,0,0,1), visibility 0ms cubic-bezier(.2,0,0,1) 0.6s;
-
-      a {
-        @include colorizeLinks();
-      }
-
-      &__visible {
-        background-color: var(--md-sys-color-surface-container-highest);
-        visibility: visible;
-        //opacity: 1;
-        height: auto;
-        max-height: $searchSurfaceMaxHeight;
-        transition-delay: 0ms;
-      }
-
-      md-outlined-text-field {
-        width: 100%;
-      }
-    }
-
-    &-container {
-      padding-top: $headerHeight;
-      padding-bottom: 0;
-      display: flex;
-      flex-direction: column;
-      max-height: $searchSurfaceMaxHeight;
-
-      &__hasResults {
-        .page-header__search-input-container {
-          margin-bottom: div($headerHeight, 2);
+      &-block {
+        &-left, &-right {
+          flex: 1;
+          display: flex;
+          align-items: center;
         }
-      }
-    }
 
-    &-results-container {
-      //margin-top: div($headerHeight, 2);
+        &-left {
+          .page-header__menu-button {
+            @include responsiveGapForList(true, false, 'padding-left');
+            @include responsiveGapForList(false, false, 'padding-right');
 
-      display: flex;
-      flex-direction: column;
-      max-height: calc($searchSurfaceMaxHeight - div($headerHeight, 2) - 61px);
-      overflow-y: auto;
-
-      @include thinScrollBars();
-
-      .animal-link {
-        text-decoration: underline;
-      }
-    }
-
-    &-input-container {
-      margin-bottom: $headerHeight;
-    }
-
-    &-results-header {
-      margin: 0 0 div($headerHeight, 8);
-    }
-
-    &-results-list {
-      list-style: none;
-      padding-inline-start: 0;
-
-      &-element {
-        margin-bottom: 0.5em;
-      }
-
-      .image-gallery_slide-preview {
-        @include mq($until: medium) {
-          width: min(calc(div(628px, 3)), calc((100vw - 64px - 8px) / 3));
-          height: min(calc(div(628px, 3)), calc((100vw - 64px - 8px) / 3));
+            &:first-of-type {
+              md-ripple {
+                @include responsiveGapForList(false, false, 'margin-left');
+              }
+            }
+          }
         }
-        @include mq($from: medium) {
-          width: min(calc(div(604px, 3)), calc((100vw - 64px - 8px) / 3));
-          height: min(calc(div(604px, 3)), calc((100vw - 64px - 8px) / 3));
+
+        &-right {
+          justify-content: flex-end;
+
+          .page-header__menu-button {
+            @include responsiveGapForList(false, false, 'padding-left');
+            @include responsiveGapForList(false, true, 'padding-right');
+
+            &:last-of-type {
+              md-ripple {
+                @include responsiveGapForList(false, false, 'margin-right');
+              }
+            }
+          }
         }
       }
 
-      .image-gallery_index {
-        margin-bottom: 1em;
-      }
+      &-button {
+        @include fontUi();
 
-      .embedded-video-list {
-        margin-bottom: 1em;
-        grid-template-columns: 1fr 1fr !important;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: $headerHeight;
+
+        color: var(--md-sys-color-on-primary);
+        font-size: 14px;
+        line-height: 20px;
+        text-decoration: none;
+        text-transform: uppercase;
+        text-align: center;
+        letter-spacing: 0.1px;
+        font-weight: 500;
+
+        &.--active {
+          text-decoration: underline;
+          text-decoration-thickness: 2px;
+          text-underline-offset: 2px;
+        }
       }
     }
   }
