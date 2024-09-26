@@ -7,13 +7,12 @@
       <a href="{{ theme-i18n 'js.menu.buttons.map.href' }}" title="{{theme-i18n 'js.menu.buttons.map.title'}}" class="page-header__menu-button"><md-ripple></md-ripple>{{theme-i18n 'js.menu.buttons.map.text'}}</a>
   </div>
 </script>
-<script type="text/discourse-plugin" version="0.4">
-api.decorateWidget('header-buttons:before', helper => {
-    return helper.h('li.header-dropdown-toggle', [
-        helper.h('a.icon#latest-button', {
-            href:'https://uskojarukous.fi/latest',
-            title: 'Uusimmat'
-        }, helper.h('i.fa.fa-bolt.d-icon.latest-button-icon')),
+<script type="text/discourse-plugin" version="0.8.22">
+api.decorateWidget('header-buttons:after', helper => {
+    let currentUser = api.getCurrentUser();
+
+    return helper.h('li.custom-login-button-li', [
+        helper.h('a.custom-login-button', { href: 'ENTER URL HERE', target: '_blank'}, 'Button')
     ]);
 });
 </script>
