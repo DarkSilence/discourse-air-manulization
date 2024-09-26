@@ -24,6 +24,37 @@ $searchSurfaceMaxHeight: 80vh;
     --d-wrap-padding-h: 0;
   }
 
+  .d-header-icons {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    a {
+      @include colorizeLinks(
+        --md-sys-color-on-primary,
+        --md-sys-color-on-primary,
+        --md-sys-color-on-primary,
+        --md-sys-color-on-primary,
+        --md-sys-color-on-primary,
+        --md-sys-color-on-primary,
+        --md-sys-color-on-primary,
+        --md-sys-color-on-primary,
+      );
+    }
+
+    li {
+      @include responsiveGapForList(false, false, 'padding-left');
+      @include responsiveGapForList(false, true, 'padding-right');
+
+      &:last-of-type {
+        md-ripple {
+          @include responsiveGapForList(false, false, 'margin-right');
+        }
+      }
+    }
+  }
+
   .page-header {
     &__logo {
       &-link {
@@ -44,7 +75,7 @@ $searchSurfaceMaxHeight: 80vh;
 
     &__menu {
       &-block {
-        &-left, &-right, .d-header-icons {
+        &-left, &-right {
           flex: 1;
           display: flex;
           align-items: center;
@@ -76,7 +107,7 @@ $searchSurfaceMaxHeight: 80vh;
           }
         }
 
-        &-right, .d-header-icons {
+        &-right {
           justify-content: flex-end;
 
           .page-header__menu-button, li {
