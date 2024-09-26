@@ -30,20 +30,22 @@ $searchSurfaceMaxHeight: 80vh;
     align-items: center;
     justify-content: flex-end;
 
-    li a {
-      @include colorizeLinks(
-        --md-sys-color-on-primary,
-        --md-sys-color-on-primary,
-        --md-sys-color-on-primary,
-        --md-sys-color-on-primary,
-        --md-sys-color-on-primary,
-        --md-sys-color-on-primary,
-        --md-sys-color-on-primary,
-        --md-sys-color-on-primary,
-      );
+    li {
+      a {
+        @include colorizeLinks(
+          --md-sys-color-on-primary,
+          --md-sys-color-on-primary,
+          --md-sys-color-on-primary,
+          --md-sys-color-on-primary,
+          --md-sys-color-on-primary,
+          --md-sys-color-on-primary,
+          --md-sys-color-on-primary,
+          --md-sys-color-on-primary,
+        );
 
-      @include responsiveGapForList(false, false, 'padding-left');
-      @include responsiveGapForList(false, true, 'padding-right');
+        @include responsiveGapForList(false, false, 'padding-left');
+        @include responsiveGapForList(false, true, 'padding-right');
+      }
 
       &:last-of-type {
         md-ripple {
