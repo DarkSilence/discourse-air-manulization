@@ -48,8 +48,10 @@ $searchSurfaceMaxHeight: 80vh;
       }
 
       &:last-of-type {
-        md-ripple {
-          @include responsiveGapForList(false, false, 'margin-right');
+        a {
+          md-ripple {
+            @include responsiveGapForList(false, false, 'margin-right');
+          }
         }
       }
     }
@@ -110,7 +112,7 @@ $searchSurfaceMaxHeight: 80vh;
         &-right {
           justify-content: flex-end;
 
-          .page-header__menu-button, li {
+          .page-header__menu-button {
             @include responsiveGapForList(false, false, 'padding-left');
             @include responsiveGapForList(false, true, 'padding-right');
 
