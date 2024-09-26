@@ -30,7 +30,7 @@ $searchSurfaceMaxHeight: 80vh;
     align-items: center;
     justify-content: flex-end;
 
-    a {
+    li a {
       @include colorizeLinks(
         --md-sys-color-on-primary,
         --md-sys-color-on-primary,
@@ -41,9 +41,7 @@ $searchSurfaceMaxHeight: 80vh;
         --md-sys-color-on-primary,
         --md-sys-color-on-primary,
       );
-    }
 
-    li {
       @include responsiveGapForList(false, false, 'padding-left');
       @include responsiveGapForList(false, true, 'padding-right');
 
