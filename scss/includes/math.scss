@@ -1,0 +1,32 @@
+$e: 2.7182818285;
+$pi: 3.1415926536;
+
+@function ceil($number){}
+@function clamp($min, $number, $max){}
+@function floor($number){}
+@function max($number...){}
+@function min($number...){}
+@function round($number){}
+
+@function abs($number){}
+@function hypot($number...){}
+
+@function log($number, $base: null){}
+@function pow($base, $exponent){}
+@function sqrt($number){}
+
+@function cos($number){}
+@function sin($number){}
+@function tan($number){}
+@function acos($number){}
+@function asin($number){}
+@function atan($number){}
+@function atan2($y, $x){}
+
+@function compatible($number1, $number2){}
+@function is-unitless($number){}
+@function unit($number){}
+
+@function div($number1, $number2){}
+@function percentage($number){}
+@function random($limit: null){}
