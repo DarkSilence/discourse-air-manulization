@@ -5,12 +5,6 @@ export default {
 
   initialize() {
     withPluginApi("0.8.14", (api) => {
-      api.decorateWidget('header-buttons:after', helper => {
-      console.log("1");
-        return helper.h('li.custom-login-button-li', [
-            helper.h('a.custom-login-button', { href: 'ENTER URL HERE', target: '_blank'}, 'Button')
-        ]);
-      });
       api.onPageChange(() => {
         // const locale = I18n.currentLocale(); // Get the user's locale
         //

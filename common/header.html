@@ -15,6 +15,16 @@
     ]);
   });
 </script>
+<script type="text/discourse-plugin" version="0.8">
+  api.decorateWidget('header-buttons:before', helper => {
+    return helper.h('button', {
+      className: 'custom-button',
+      onclick() {
+        window.location.href = '/your-custom-url';
+      }
+    }, 'Your Button Text');
+  });
+</script>
 <!--<script type="text/x-handlebars" data-template-name="/connectors/before-header-panel/right">-->
 <!--  <div class="page-header__menu-block-right &#45;&#45;desktop">-->
 <!--  </div>-->
