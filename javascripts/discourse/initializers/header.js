@@ -1,4 +1,5 @@
 import { withPluginApi } from "discourse/lib/plugin-api";
+import { iconNode } from "discourse-common/lib/icon-library";
 
 export default {
   name: 'header-initializer',
@@ -6,7 +7,6 @@ export default {
   initialize() {
     withPluginApi("0.8.14", (api) => {
         console.log(0);
-      const { iconNode } = require("discourse-common/lib/icon-library");
       api.decorateWidget('header-buttons:before', helper => {
           console.log(1);
           return helper.h('li.header-dropdown-toggle', [
