@@ -79,7 +79,7 @@ $searchSurfaceMaxHeight: 80vh;
         &-right, .d-header-icons {
           justify-content: flex-end;
 
-          .page-header__menu-button {
+          .page-header__menu-button, li {
             @include responsiveGapForList(false, false, 'padding-left');
             @include responsiveGapForList(false, true, 'padding-right');
 
