@@ -7,7 +7,7 @@ export default {
   initialize() {
     withPluginApi("0.8.14", (api) => {
         console.log(0);
-      api.decorateWidget('header-buttons:before', helper => {
+      api.decorateWidget('home-logo:after', helper => {
           console.log(1);
           return helper.h('li.header-dropdown-toggle', [
               helper.h('a.icon', {
