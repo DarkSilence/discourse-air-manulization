@@ -5,6 +5,18 @@ export default {
 
   initialize() {
     withPluginApi("0.8.14", (api) => {
+        console.log(0);
+      const { iconNode } = require("discourse-common/lib/icon-library");
+      api.decorateWidget('header-icons:before', helper => {
+          console.log(1);
+          return helper.h('li.header-dropdown-toggle', [
+              helper.h('a.icon', {
+                  href:'/docs',
+                  title: 'Document'
+              }, iconNode("book")),
+          ]);
+      });
+
       api.onPageChange(() => {
         // const locale = I18n.currentLocale(); // Get the user's locale
         //

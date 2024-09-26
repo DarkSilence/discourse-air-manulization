@@ -7,17 +7,6 @@
       <a href="{{ theme-i18n 'js.menu.buttons.map.href' }}" title="{{theme-i18n 'js.menu.buttons.map.title'}}" class="page-header__menu-button"><md-ripple></md-ripple>{{theme-i18n 'js.menu.buttons.map.text'}}</a>
   </div>
 </script>
-<script type="text/discourse-plugin" version="0.8">
-    const { iconNode } = require("discourse-common/lib/icon-library");
-    api.decorateWidget('header-icons:before', helper => {
-        return helper.h('li.header-dropdown-toggle', [
-            helper.h('a.icon', {
-                href:'/docs',
-                title: 'Document'
-            }, iconNode("book")),
-        ]);
-    });
-</script>
 <!--<script type="text/x-handlebars" data-template-name="/connectors/before-header-panel/right">-->
 <!--  <div class="page-header__menu-block-right &#45;&#45;desktop">-->
 <!--  </div>-->
