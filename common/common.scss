@@ -47,13 +47,13 @@ $searchSurfaceMaxHeight: 80vh;
         @include responsiveGapForList(false, true, 'padding-right');
       }
 
-      &:last-of-type {
-        a {
-          md-ripple {
-            @include responsiveGapForList(false, false, 'margin-right');
-          }
-        }
-      }
+      //&:last-of-type {
+      //  a {
+      //    md-ripple {
+      //      @include responsiveGapForList(false, false, 'margin-right');
+      //    }
+      //  }
+      //}
     }
   }
 
