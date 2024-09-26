@@ -8,13 +8,12 @@
   </div>
 </script>
 <script type="text/discourse-plugin" version="0.8.22">
-api.decorateWidget('header-buttons:after', helper => {
-    let currentUser = api.getCurrentUser();
-
+  api.decorateWidget('header-buttons:after', helper => {
+  console.log("1");
     return helper.h('li.custom-login-button-li', [
         helper.h('a.custom-login-button', { href: 'ENTER URL HERE', target: '_blank'}, 'Button')
     ]);
-});
+  });
 </script>
 <!--<script type="text/x-handlebars" data-template-name="/connectors/before-header-panel/right">-->
 <!--  <div class="page-header__menu-block-right &#45;&#45;desktop">-->
