@@ -6,10 +6,6 @@ export default {
 
   initialize() {
     withPluginApi("0.8.14", (api) => {
-        console.log(0);
-      api.headerIcons.add("some-unique-name", <template>
-    <li><DButton class="icon btn-flat" @href="/u" @icon="address-book" /></li>
-  </template>);
 
       api.onPageChange(() => {
         // const locale = I18n.currentLocale(); // Get the user's locale

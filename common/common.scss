@@ -14,19 +14,6 @@ $searchSurfaceMaxHeight: 80vh;
     --d-wrap-padding-h: 0;
   }
 
-  a {
-    @include colorizeLinks(
-      --md-sys-color-on-primary,
-      --md-sys-color-on-primary,
-      --md-sys-color-on-primary,
-      --md-sys-color-on-primary,
-      --md-sys-color-on-primary,
-      --md-sys-color-on-primary,
-      --md-sys-color-on-primary,
-      --md-sys-color-on-primary,
-    );
-  }
-
   .page-header {
     &__logo {
       &-link {
@@ -50,6 +37,19 @@ $searchSurfaceMaxHeight: 80vh;
       align-items: center;
       justify-content: space-between;
       height: $headerHeight;
+
+      a {
+        @include colorizeLinks(
+          --md-sys-color-on-primary,
+          --md-sys-color-on-primary,
+          --md-sys-color-on-primary,
+          --md-sys-color-on-primary,
+          --md-sys-color-on-primary,
+          --md-sys-color-on-primary,
+          --md-sys-color-on-primary,
+          --md-sys-color-on-primary,
+        );
+      }
 
       //@include pageMargins();
 

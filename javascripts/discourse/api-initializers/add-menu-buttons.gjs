@@ -3,6 +3,6 @@ import { apiInitializer } from "discourse/lib/api";
 
 export default apiInitializer("1.0", (api) => {
   api.headerIcons.add("some-unique-name", <template>
-    <li><DButton class="icon btn-flat" @href="/u" @icon="address-book" /></li>
-  </template>);
+    <li><a href="{{ theme-i18n 'js.menu.buttons.map.href' }}" title="{{theme-i18n 'js.menu.buttons.map.title'}}" class="page-header__menu-button"><md-ripple></md-ripple>{{theme-i18n 'js.menu.buttons.map.text'}}</a></li>
+  </template>, { before: "chat" });
 });
