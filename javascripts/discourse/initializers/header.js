@@ -10,7 +10,7 @@ export default {
         const btnSidebarToggle = document.querySelector('#toggle-hamburger-menu');
         if (btnSidebarToggle) {
           console.log(btnSidebarToggle);
-          btnSidebarToggle.className = "btn-sidebar-toggle "
+          btnSidebarToggle.className = "d-header-menu-button"
           btnSidebarToggle.innerHTML = '<md-ripple></md-ripple><md-icon translate="no" style="color: var(--md-sys-color-on-primary)">menu</md-icon>';
         }
 
