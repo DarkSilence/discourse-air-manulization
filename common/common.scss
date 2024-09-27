@@ -20,12 +20,17 @@ $searchSurfaceMaxHeight: 80vh;
   background-color: rgba(var(--header_background-rgb), 0.75);
   box-shadow: none;
 
+  &>.wrap {
+    max-width: unset !important;
+    --d-wrap-padding-h: 0;
+  }
+
   .header-sidebar-toggle {
     order: 0;
+  }
 
-    button {
-
-    }
+  .d-header-menu-buttons {
+    order: 1;
   }
 
   .home-logo-wrapper-outlet {
@@ -44,9 +49,22 @@ $searchSurfaceMaxHeight: 80vh;
     order: 5;
   }
 
-  &>.wrap {
-    max-width: unset !important;
-    --d-wrap-padding-h: 0;
+  button.d-header-menu-buttons {
+    flex: 1;
+    display: flex;
+    align-items: center;
+  }
+
+  .d-header-menu-button {
+    @include responsiveGapForList(true, false, 'padding-left');
+    @include responsiveGapForList(false, false, 'padding-right');
+  }
+
+  button.d-header-menu-button {
+    margin: 0 !important;
+    width: unset !important;
+    height: unset !important;
+    padding: 0 !important;
   }
 
   .d-header-icons {
@@ -55,30 +73,30 @@ $searchSurfaceMaxHeight: 80vh;
     align-items: center;
     justify-content: flex-end;
 
-    li {
-      a {
-        @include colorizeLinks(
-          --md-sys-color-on-primary,
-          --md-sys-color-on-primary,
-          --md-sys-color-on-primary,
-          --md-sys-color-on-primary,
-          --md-sys-color-on-primary,
-          --md-sys-color-on-primary,
-          --md-sys-color-on-primary,
-          --md-sys-color-on-primary,
-        );
-
-        @include responsiveGapForList(false, false, 'padding-left');
-        @include responsiveGapForList(false, true, 'padding-right');
-      }
-
-      //&:last-of-type {
-      //  a {
-      //    md-ripple {
-      //      @include responsiveGapForList(false, false, 'margin-right');
-      //    }
-      //  }
-      //}
+    //li {
+    //  a {
+    //    @include colorizeLinks(
+    //      --md-sys-color-on-primary,
+    //      --md-sys-color-on-primary,
+    //      --md-sys-color-on-primary,
+    //      --md-sys-color-on-primary,
+    //      --md-sys-color-on-primary,
+    //      --md-sys-color-on-primary,
+    //      --md-sys-color-on-primary,
+    //      --md-sys-color-on-primary,
+    //    );
+    //
+    //    @include responsiveGapForList(false, false, 'padding-left');
+    //    @include responsiveGapForList(false, true, 'padding-right');
+    //  }
+    //
+    //  //&:last-of-type {
+    //  //  a {
+    //  //    md-ripple {
+    //  //      @include responsiveGapForList(false, false, 'margin-right');
+    //  //    }
+    //  //  }
+    //  //}
     }
   }
 
@@ -100,83 +118,83 @@ $searchSurfaceMaxHeight: 80vh;
       }
     }
 
-    &__menu {
-      &-block {
-        &-left, &-right {
-          flex: 1;
-          display: flex;
-          align-items: center;
-
-          a {
-            @include colorizeLinks(
-              --md-sys-color-on-primary,
-              --md-sys-color-on-primary,
-              --md-sys-color-on-primary,
-              --md-sys-color-on-primary,
-              --md-sys-color-on-primary,
-              --md-sys-color-on-primary,
-              --md-sys-color-on-primary,
-              --md-sys-color-on-primary,
-            );
-          }
-        }
-
-        &-left {
-          order: 1;
-
-          .page-header__menu-button {
-            @include responsiveGapForList(true, false, 'padding-left');
-            @include responsiveGapForList(false, false, 'padding-right');
-
-            &:first-of-type {
-              md-ripple {
-                @include responsiveGapForList(false, false, 'margin-left');
-              }
-            }
-          }
-        }
-
-        &-right {
-          justify-content: flex-end;
-
-          .page-header__menu-button {
-            @include responsiveGapForList(false, false, 'padding-left');
-            @include responsiveGapForList(false, true, 'padding-right');
-
-            &:last-of-type {
-              md-ripple {
-                @include responsiveGapForList(false, false, 'margin-right');
-              }
-            }
-          }
-        }
-      }
-
-      &-button {
-        @include fontUi();
-
-        position: relative;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: $headerHeight;
-
-        color: var(--md-sys-color-on-primary);
-        font-size: 14px;
-        line-height: 20px;
-        text-decoration: none;
-        text-transform: uppercase;
-        text-align: center;
-        letter-spacing: 0.1px;
-        font-weight: 500;
-
-        &.--active {
-          text-decoration: underline;
-          text-decoration-thickness: 2px;
-          text-underline-offset: 2px;
-        }
-      }
-    }
+    //&__menu {
+    //  &-block {
+    //    &-left, &-right {
+    //      flex: 1;
+    //      display: flex;
+    //      align-items: center;
+    //
+    //      a {
+    //        @include colorizeLinks(
+    //          --md-sys-color-on-primary,
+    //          --md-sys-color-on-primary,
+    //          --md-sys-color-on-primary,
+    //          --md-sys-color-on-primary,
+    //          --md-sys-color-on-primary,
+    //          --md-sys-color-on-primary,
+    //          --md-sys-color-on-primary,
+    //          --md-sys-color-on-primary,
+    //        );
+    //      }
+    //    }
+    //
+    //    &-left {
+    //      order: 1;
+    //
+    //      .page-header__menu-button {
+    //        @include responsiveGapForList(true, false, 'padding-left');
+    //        @include responsiveGapForList(false, false, 'padding-right');
+    //
+    //        &:first-of-type {
+    //          md-ripple {
+    //            @include responsiveGapForList(false, false, 'margin-left');
+    //          }
+    //        }
+    //      }
+    //    }
+    //
+    //    &-right {
+    //      justify-content: flex-end;
+    //
+    //      .page-header__menu-button {
+    //        @include responsiveGapForList(false, false, 'padding-left');
+    //        @include responsiveGapForList(false, true, 'padding-right');
+    //
+    //        &:last-of-type {
+    //          md-ripple {
+    //            @include responsiveGapForList(false, false, 'margin-right');
+    //          }
+    //        }
+    //      }
+    //    }
+    //  }
+    //
+    //  &-button {
+    //    @include fontUi();
+    //
+    //    position: relative;
+    //    display: flex;
+    //    align-items: center;
+    //    justify-content: center;
+    //    height: $headerHeight;
+    //
+    //    color: var(--md-sys-color-on-primary);
+    //    font-size: 14px;
+    //    line-height: 20px;
+    //    text-decoration: none;
+    //    text-transform: uppercase;
+    //    text-align: center;
+    //    letter-spacing: 0.1px;
+    //    font-weight: 500;
+    //
+    //    &.--active {
+    //      text-decoration: underline;
+    //      text-decoration-thickness: 2px;
+    //      text-underline-offset: 2px;
+    //    }
+    //  }
+    //}
   }
 }
 

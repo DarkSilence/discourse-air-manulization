@@ -6,8 +6,13 @@ export default {
 
   initialize() {
     withPluginApi("0.8.14", (api) => {
-
       api.onPageChange(() => {
+        const btnSidebarToggle = document.querySelector('.d-header .btn-sidebar-toggle');
+        if (btnSidebarToggle) {
+          btnSidebarToggle.className = "btn-sidebar-toggle "
+          btnSidebarToggle.innerHTML = '<md-ripple></md-ripple><md-icon translate="no" style="color: var(--md-sys-color-on-primary)">menu</md-icon>';
+        }
+
         // const locale = I18n.currentLocale(); // Get the user's locale
         //
         // // Define URLs based on the locale
