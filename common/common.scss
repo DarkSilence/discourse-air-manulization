@@ -33,20 +33,24 @@ $searchSurfaceMaxHeight: 80vh;
     order: 1;
   }
 
-  .home-logo-wrapper-outlet {
+  .extra-info-wrapper {
     order: 2;
   }
 
-  .before-header-panel-outlet {
+  .home-logo-wrapper-outlet {
     order: 3;
   }
 
-  .panel {
+  .before-header-panel-outlet {
     order: 4;
   }
 
-  .after-header-panel-outlet {
+  .panel {
     order: 5;
+  }
+
+  .after-header-panel-outlet {
+    order: 6;
   }
 
   .d-header-menu-buttons {
