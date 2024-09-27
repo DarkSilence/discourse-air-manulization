@@ -31,6 +31,16 @@ $searchSurfaceMaxHeight: 80vh;
 
   .d-header-menu-buttons {
     order: 1;
+
+    @include mq($until: medium) {
+      display: none;
+    }
+  }
+
+  .d-header-community-element {
+    @include mq($until: medium) {
+      display: none;
+    }
   }
 
   .home-logo-wrapper-outlet {
