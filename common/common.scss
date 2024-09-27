@@ -19,6 +19,30 @@ $searchSurfaceMaxHeight: 80vh;
   background-color: rgba(var(--header_background-rgb), 0.75);
   box-shadow: none;
 
+  .header-sidebar-toggle {
+    order: 0;
+
+    button {
+
+    }
+  }
+
+  .home-logo-wrapper-outlet {
+    order: 2;
+  }
+
+  .before-header-panel-outlet {
+    order: 3;
+  }
+
+  .panel {
+    order: 4;
+  }
+
+  .after-header-panel-outlet {
+    order: 5;
+  }
+
   &>.wrap {
     max-width: unset !important;
     --d-wrap-padding-h: 0;
@@ -97,6 +121,8 @@ $searchSurfaceMaxHeight: 80vh;
         }
 
         &-left {
+          order: 1;
+
           .page-header__menu-button {
             @include responsiveGapForList(true, false, 'padding-left');
             @include responsiveGapForList(false, false, 'padding-right');
