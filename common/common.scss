@@ -33,11 +33,11 @@ $searchSurfaceMaxHeight: 80vh;
     order: 1;
   }
 
-  .extra-info-wrapper {
+  .home-logo-wrapper-outlet {
     order: 2;
   }
 
-  .home-logo-wrapper-outlet {
+  .extra-info-wrapper {
     order: 3;
   }
 
@@ -47,6 +47,7 @@ $searchSurfaceMaxHeight: 80vh;
 
   .panel {
     order: 5;
+    flex: 1 1 0;
   }
 
   .after-header-panel-outlet {
@@ -54,11 +55,23 @@ $searchSurfaceMaxHeight: 80vh;
   }
 
   .d-header-menu-buttons {
-    flex: 1;
     display: flex;
     align-items: center;
+    flex: 1 1 0;
   }
 
+  .chat-header-icon {
+    .svg-icon {
+      color: white;
+      width: 24px;
+      height: 24px;
+    }
+    a:hover {
+      background: transparent !important;
+    }
+  }
+
+  .chat-header-icon a,
   .d-header-menu-button {
     position: relative;
     display: flex;
