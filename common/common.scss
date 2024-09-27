@@ -94,6 +94,10 @@ $searchSurfaceMaxHeight: 80vh;
     background: transparent;
     border: 0 !important;
     -webkit-appearance: unset !important;
+
+    &:hover {
+      background: transparent !important;
+    }
   }
 
   .d-header-icons {
