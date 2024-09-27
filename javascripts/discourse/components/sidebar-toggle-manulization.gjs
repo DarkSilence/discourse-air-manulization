@@ -15,7 +15,7 @@ export default class SidebarToggleManulization extends Component {
     e.preventDefaults();
 
     if (this.sidebarState.adminSidebarAllowedWithLegacyNavigationMenu) {
-      this.args.toggleNavigationMenu("sidebar");
+      @toggleNavigationMenu("sidebar");
     } else {
       @toggleNavigationMenu();
     }
