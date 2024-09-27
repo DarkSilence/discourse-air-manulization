@@ -19,6 +19,12 @@ export default {
           btnSearch.innerHTML = '<md-ripple></md-ripple><md-icon translate="no" style="color: var(--md-sys-color-on-primary)">search</md-icon>';
         }
 
+        const btnCurrentuser = document.querySelector('#toggle-current-user');
+        if (btnCurrentuser) {
+          btnCurrentuser.className = "d-header-menu-button"
+          btnCurrentuser.innerHTML = '<md-ripple></md-ripple><md-icon translate="no" style="color: var(--md-sys-color-on-primary)">person_filled</md-icon>';
+        }
+
         const btnSidebarToggle = document.querySelector('.btn-sidebar-toggle');
         if (btnSidebarToggle) {
           btnSidebarToggle.className = "d-header-menu-button btn-sidebar-toggle"

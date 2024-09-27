@@ -73,7 +73,9 @@ $searchSurfaceMaxHeight: 80vh;
     }
     a:hover {
       background: transparent !important;
-      color: white;
+      .svg-icon {
+        color: white;
+      }
     }
   }
 
