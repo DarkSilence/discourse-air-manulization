@@ -56,15 +56,18 @@ $searchSurfaceMaxHeight: 80vh;
   }
 
   .d-header-menu-button {
-    @include responsiveGapForList(true, false, 'padding-left');
+    @include responsiveGapForList(false, false, 'padding-left');
     @include responsiveGapForList(false, false, 'padding-right');
   }
 
   button.d-header-menu-button {
     margin: 0 !important;
     width: unset !important;
-    height: unset !important;
-    padding: 0 !important;
+    height: $headerHeight !important;
+    background: transparent;
+    border: 0 !important;
+    -webkit-appearance: unset !important;
+    //padding: 0 !important;
   }
 
   .d-header-icons {
