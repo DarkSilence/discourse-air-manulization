@@ -13,18 +13,24 @@ export default {
           btnHamburgerMenu.innerHTML = '<md-ripple></md-ripple><md-icon translate="no" style="color: var(--md-sys-color-on-primary)">menu</md-icon>';
         }
 
+        const btnSearch = document.querySelector('#search-button');
+        if (btnSearch) {
+          btnSearch.className = "d-header-menu-button"
+          btnSearch.innerHTML = '<md-ripple></md-ripple><md-icon translate="no" style="color: var(--md-sys-color-on-primary)">search</md-icon>';
+        }
+
         const btnSidebarToggle = document.querySelector('.btn-sidebar-toggle');
         if (btnSidebarToggle) {
           btnSidebarToggle.className = "d-header-menu-button btn-sidebar-toggle"
           btnSidebarToggle.innerHTML = '<md-ripple></md-ripple><md-icon translate="no" style="color: var(--md-sys-color-on-primary)">menu</md-icon>';
         }
 
-        const chatLink = document.querySelector('.header-dropdown-toggle.chat-header-icon a');
-        if (chatLink) {
-          console.log(chatLink);
-          chatLink.className = "d-header-menu-button"
-          chatLink.innerHTML = '<md-ripple></md-ripple><md-icon translate="no" style="color: var(--md-sys-color-on-primary)">menu</md-icon>';
-        }
+        // const chatLink = document.querySelector('.header-dropdown-toggle.chat-header-icon a');
+        // if (chatLink) {
+        //   console.log(chatLink);
+        //   chatLink.className = "d-header-menu-button"
+        //   chatLink.innerHTML = '<md-ripple></md-ripple><md-icon translate="no" style="color: var(--md-sys-color-on-primary)">menu</md-icon>';
+        // }
 
         // const locale = I18n.currentLocale(); // Get the user's locale
         //
