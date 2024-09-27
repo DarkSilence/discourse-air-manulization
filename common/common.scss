@@ -119,21 +119,22 @@ $searchSurfaceMaxHeight: 80vh;
     @include fontUi();
   }
 
-  a {
-    @include colorizeLinks(
-                    --md-sys-color-on-primary,
-                    --md-sys-color-on-primary,
-                    --md-sys-color-on-primary,
-                    --md-sys-color-on-primary,
-                    --md-sys-color-on-primary,
-                    --md-sys-color-on-primary,
-                    --md-sys-color-on-primary,
-                    --md-sys-color-on-primary,
-    );
-  }
-
-  .svg-icon {
-    color: var(--md-sys-color-on-primary) !important;
+  .c-header {
+    a {
+      @include colorizeLinks(
+                      --md-sys-color-on-primary,
+                      --md-sys-color-on-primary,
+                      --md-sys-color-on-primary,
+                      --md-sys-color-on-primary,
+                      --md-sys-color-on-primary,
+                      --md-sys-color-on-primary,
+                      --md-sys-color-on-primary,
+                      --md-sys-color-on-primary,
+      );
+      .svg-icon {
+        color: var(--md-sys-color-on-primary) !important;
+      }
+    }
   }
 
   button.d-header-menu-button {

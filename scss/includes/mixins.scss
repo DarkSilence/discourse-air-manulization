@@ -389,35 +389,35 @@
     $activeColorDark: --md-ref-palette-tertiary90
 ) {
     & {
-        color: var($linkColor) !important;
+        color: var($linkColor);
     }
 
     &:link {
-        color: var($linkColor) !important;;
+        color: var($linkColor);
 
         @media (prefers-color-scheme: dark) {
-            color: var($linkColorDark) !important;;
+            color: var($linkColorDark);
         }
     }
     &:visited {
-        color: var($visitedColor) !important;;
+        color: var($visitedColor);
 
         @media (prefers-color-scheme: dark) {
-            color: var($visitedColorDark) !important;;
+            color: var($visitedColorDark);
         }
     }
     &:hover {
-        color: var($hoverColor) !important;;
+        color: var($hoverColor);
 
         @media (prefers-color-scheme: dark) {
-            color: var($hoverColorDark) !important;;
+            color: var($hoverColorDark);
         }
     }
     &:active {
-        color: var($activeColor) !important;;
+        color: var($activeColor);
 
         @media (prefers-color-scheme: dark) {
-            color: var($activeColorDark) !important;;
+            color: var($activeColorDark);
         }
     }
 }
