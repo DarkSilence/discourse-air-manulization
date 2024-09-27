@@ -7,7 +7,13 @@ export default {
   initialize() {
     withPluginApi("0.8.14", (api) => {
       api.onPageChange(() => {
-        const btnSidebarToggle = document.querySelector('#toggle-hamburger-menu');
+        const btnHamburgerMenu = document.querySelector('#toggle-hamburger-menu');
+        if (btnHamburgerMenu) {
+          btnHamburgerMenu.className = "d-header-menu-button"
+          btnHamburgerMenu.innerHTML = '<md-ripple></md-ripple><md-icon translate="no" style="color: var(--md-sys-color-on-primary)">menu</md-icon>';
+        }
+
+        const btnSidebarToggle = document.querySelector('.btn-sidebar-toggle');
         if (btnSidebarToggle) {
           btnSidebarToggle.className = "d-header-menu-button"
           btnSidebarToggle.innerHTML = '<md-ripple></md-ripple><md-icon translate="no" style="color: var(--md-sys-color-on-primary)">menu</md-icon>';
