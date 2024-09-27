@@ -17,7 +17,7 @@ export default class SidebarToggleManulization extends Component {
     if (this.sidebarState.adminSidebarAllowedWithLegacyNavigationMenu) {
       this.args.toggleNavigationMenu("sidebar");
     } else {
-      this.args.toggleNavigationMenu();
+      @toggleNavigationMenu();
     }
 
     // remove the focus of the header dropdown button after clicking
