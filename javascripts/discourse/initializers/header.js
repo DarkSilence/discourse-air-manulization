@@ -7,7 +7,7 @@ export default {
   initialize() {
     withPluginApi("0.8.14", (api) => {
       api.onPageChange(() => {
-        const btnSidebarToggle = document.querySelector('.d-header .btn-sidebar-toggle');
+        const btnSidebarToggle = document.querySelector('.btn-sidebar-toggle');
         if (btnSidebarToggle) {
           console.log(btnSidebarToggle);
           btnSidebarToggle.className = "btn-sidebar-toggle "
