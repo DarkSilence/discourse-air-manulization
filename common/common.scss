@@ -56,8 +56,31 @@ $searchSurfaceMaxHeight: 80vh;
   }
 
   .d-header-menu-button {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: $headerHeight;
+
+    color: var(--md-sys-color-on-primary);
+    font-size: 14px;
+    line-height: 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 0.1px;
+    font-weight: 500;
+
+    &.--active {
+      text-decoration: underline;
+      text-decoration-thickness: 2px;
+      text-underline-offset: 2px;
+    }
+
     @include responsiveGapForList(false, false, 'padding-left');
     @include responsiveGapForList(false, false, 'padding-right');
+
+    @include fontUi();
   }
 
   button.d-header-menu-button {
@@ -67,7 +90,6 @@ $searchSurfaceMaxHeight: 80vh;
     background: transparent;
     border: 0 !important;
     -webkit-appearance: unset !important;
-    //padding: 0 !important;
   }
 
   .d-header-icons {
