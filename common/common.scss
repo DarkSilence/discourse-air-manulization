@@ -133,25 +133,7 @@ $searchSurfaceMaxHeight: 80vh;
   }
 
   .svg-icon {
-    color: var(--md-sys-color-on-primary);
-  }
-
-  .c-header {
-    a {
-      @include colorizeLinks(
-                      --md-sys-color-on-primary,
-                      --md-sys-color-on-primary,
-                      --md-sys-color-on-primary,
-                      --md-sys-color-on-primary,
-                      --md-sys-color-on-primary,
-                      --md-sys-color-on-primary,
-                      --md-sys-color-on-primary,
-                      --md-sys-color-on-primary,
-      );
-      .svg-icon {
-        color: var(--md-sys-color-on-primary);
-      }
-    }
+    color: var(--md-sys-color-on-primary) !important;
   }
 
   button.d-header-menu-button {
