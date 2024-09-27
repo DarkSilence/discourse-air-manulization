@@ -132,19 +132,8 @@ $searchSurfaceMaxHeight: 80vh;
     );
   }
 
-  .c-header {
-    a {
-      @include colorizeLinks(
-                      --md-sys-color-on-primary,
-                      --md-sys-color-on-primary,
-                      --md-sys-color-on-primary,
-                      --md-sys-color-on-primary,
-                      --md-sys-color-on-primary,
-                      --md-sys-color-on-primary,
-                      --md-sys-color-on-primary,
-                      --md-sys-color-on-primary,
-      );
-    }
+  .svg-icon {
+    color: var(--md-sys-color-on-primary);
   }
 
   button.d-header-menu-button {
