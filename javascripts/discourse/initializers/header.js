@@ -9,9 +9,15 @@ export default {
       api.onPageChange(() => {
         const btnSidebarToggle = document.querySelector('#toggle-hamburger-menu');
         if (btnSidebarToggle) {
-          console.log(btnSidebarToggle);
           btnSidebarToggle.className = "d-header-menu-button"
           btnSidebarToggle.innerHTML = '<md-ripple></md-ripple><md-icon translate="no" style="color: var(--md-sys-color-on-primary)">menu</md-icon>';
+        }
+
+        const chatLink = document.querySelector('.header-dropdown-toggle .chat-header-icon a');
+        if (chatLink) {
+          console.log(chatLink);
+          chatLink.className = "d-header-menu-button"
+          chatLink.innerHTML = '<md-ripple></md-ripple><md-icon translate="no" style="color: var(--md-sys-color-on-primary)">menu</md-icon>';
         }
 
         // const locale = I18n.currentLocale(); // Get the user's locale
