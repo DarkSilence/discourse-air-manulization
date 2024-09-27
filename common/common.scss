@@ -33,13 +33,13 @@ $searchSurfaceMaxHeight: 80vh;
     order: 1;
 
     @include mq($until: medium) {
-      display: none;
+      display: none !important;
     }
   }
 
   .d-header-community-element {
     @include mq($until: medium) {
-      display: none;
+      display: none !important;
     }
   }
 
