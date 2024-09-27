@@ -119,6 +119,34 @@ $searchSurfaceMaxHeight: 80vh;
     @include fontUi();
   }
 
+  a {
+    @include colorizeLinks(
+                    --md-sys-color-on-primary,
+                    --md-sys-color-on-primary,
+                    --md-sys-color-on-primary,
+                    --md-sys-color-on-primary,
+                    --md-sys-color-on-primary,
+                    --md-sys-color-on-primary,
+                    --md-sys-color-on-primary,
+                    --md-sys-color-on-primary,
+    );
+  }
+
+  .c-header {
+    a {
+      @include colorizeLinks(
+                      --md-sys-color-on-primary,
+                      --md-sys-color-on-primary,
+                      --md-sys-color-on-primary,
+                      --md-sys-color-on-primary,
+                      --md-sys-color-on-primary,
+                      --md-sys-color-on-primary,
+                      --md-sys-color-on-primary,
+                      --md-sys-color-on-primary,
+      );
+    }
+  }
+
   button.d-header-menu-button {
     margin: 0 !important;
     width: unset !important;
