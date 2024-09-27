@@ -66,8 +66,14 @@ $searchSurfaceMaxHeight: 80vh;
       width: 24px;
       height: 24px;
     }
+    a {
+      border: none !important;
+      padding-top: 0 !important;
+      padding-bottom: 0 !important;
+    }
     a:hover {
       background: transparent !important;
+      color: white;
     }
   }
 
