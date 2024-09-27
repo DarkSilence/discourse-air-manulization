@@ -9,6 +9,7 @@ export default {
       api.onPageChange(() => {
         const btnSidebarToggle = document.querySelector('.d-header .btn-sidebar-toggle');
         if (btnSidebarToggle) {
+          console.log(btnSidebarToggle);
           btnSidebarToggle.className = "btn-sidebar-toggle "
           btnSidebarToggle.innerHTML = '<md-ripple></md-ripple><md-icon translate="no" style="color: var(--md-sys-color-on-primary)">menu</md-icon>';
         }
