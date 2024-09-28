@@ -242,8 +242,8 @@ $searchSurfaceMaxHeight: 80vh;
 
 .topic-list .topic-excerpt,
 .topic-list .num .badge-posts,
-.topic-list .num .post-activity span {
-  color: var(--md-sys-color-on-background);
+.topic-list .num a {
+  color: var(--md-sys-color-on-background) !important;
 }
 
 .badge-wrapper.box {
@@ -369,6 +369,10 @@ div.ac-wrap {
   .btn.widget-button {
     border-radius: 0px;
   }
+}
+
+.topic-list-item.visited .topic-list-data a.title:not(.badge-notification), .latest-topic-list-item.visited a.title:not(.badge-notification), .category-topic-link.visited a.title:not(.badge-notification) {
+  color: var(--tertiary);
 }
 
 .unread-high-priority-notifications {
