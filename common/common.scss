@@ -282,6 +282,25 @@ $searchSurfaceMaxHeight: 80vh;
   }
 }
 
+.page-footer {
+    text-align: center;
+    padding: 0.5em 0;
+
+    .page-footer__text {
+        margin: 0.5em 1em;
+    }
+
+    .social-links {
+        justify-content: center;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+
+        display: flex;
+        flex-direction: row;
+    }
+}
+
 // custom search banner customizations
 .custom-search-banner-wrap {
   margin: 0 auto !important;
