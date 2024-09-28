@@ -216,16 +216,12 @@ $searchSurfaceMaxHeight: 80vh;
 }
 
 .btn, .d-modal.json-schema-editor-modal .je-ready button, .d-modal.json-schema-editor-modal .je-ready .json-editor-btn-add {
-  border: none !important;
-  padding: 10px 24px !important;
-  font-family: var(--md-sys-typescale-label-small-font-family-name) !important;
-  font-size: 12.25px !important;
-  line-height: 20px !important;
+  border: none;
+  padding: 10px 24px;
+  font-family: var(--md-sys-typescale-label-small-font-family-name);
+  font-size: 12.25px;
+  line-height: 20px;
   border-radius: 9999px !important;
-
-  &.btn-icon-text {
-    padding: 10px 24px 10px 16px !important;
-  }
 }
 
 // Main customizations
