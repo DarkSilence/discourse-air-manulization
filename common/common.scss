@@ -13,7 +13,7 @@ $searchSurfaceMaxHeight: 80vh;
   --d-border-radius: 4px;
   --d-border-radius-large: 4px;
   --d-nav-pill-border-radius: var(--d-border-radius);
-  --d-button-border-radius: 4px;
+  --d-button-border-radius: 9999px;
   --d-input-border-radius: 4px;
   --d-button-transition: none;
 }
@@ -166,31 +166,6 @@ $searchSurfaceMaxHeight: 80vh;
     display: flex;
     align-items: center;
     justify-content: flex-end;
-
-    //li {
-    //  a {
-    //    @include colorizeLinks(
-    //      --md-sys-color-on-primary,
-    //      --md-sys-color-on-primary,
-    //      --md-sys-color-on-primary,
-    //      --md-sys-color-on-primary,
-    //      --md-sys-color-on-primary,
-    //      --md-sys-color-on-primary,
-    //      --md-sys-color-on-primary,
-    //      --md-sys-color-on-primary,
-    //    );
-    //
-    //    @include responsiveGapForList(false, false, 'padding-left');
-    //    @include responsiveGapForList(false, true, 'padding-right');
-    //  }
-    //
-    //  //&:last-of-type {
-    //  //  a {
-    //  //    md-ripple {
-    //  //      @include responsiveGapForList(false, false, 'margin-right');
-    //  //    }
-    //  //  }
-    //  //}
   }
 
   .page-header {
@@ -237,21 +212,14 @@ $searchSurfaceMaxHeight: 80vh;
   }
 }
 
-// Ideally the search banner component should be set to use the below-site-header outlet,
-// but this ensures the default works too
-.above-main-container-outlet.search-banner {
-  .custom-search-banner-wrap {
-    padding: 1em 0 2em;
-    color: var(--primary);
-    .mobile-view & {
-      color: var(--primary);
-    }
-    h1 {
-      margin-bottom: 0;
-    }
-    .search-widget {
-      margin-top: 2em;
-    }
+.btn, .d-modal.json-schema-editor-modal .je-ready button, .d-modal.json-schema-editor-modal .je-ready .json-editor-btn-add {
+  border: none !important;
+  padding: 10px 24px;
+  font-family: var(--md-sys-typescale-label-small-font-family-name);
+  font-size: 12.25px;
+  line-height: 20px;
+  &.btn-icon-text {
+    padding: 10px 24px 10px 16px;
   }
 }
 
