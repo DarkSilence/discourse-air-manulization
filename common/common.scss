@@ -9,6 +9,15 @@ $headerHeight: 60px;
 $buttonPadding: 16px;
 $searchSurfaceMaxHeight: 80vh;
 
+:root {
+  --d-border-radius: 4px;
+  --d-border-radius-large: 4px;
+  --d-nav-pill-border-radius: var(--d-border-radius);
+  --d-button-border-radius: 4px;
+  --d-input-border-radius: 4px;
+  --d-button-transition: none;
+}
+
 .d-header {
   display: flex;
   align-items: center;
@@ -201,84 +210,6 @@ $searchSurfaceMaxHeight: 80vh;
         height: 38px;
       }
     }
-
-    //&__menu {
-    //  &-block {
-    //    &-left, &-right {
-    //      flex: 1;
-    //      display: flex;
-    //      align-items: center;
-    //
-    //      a {
-    //        @include colorizeLinks(
-    //          --md-sys-color-on-primary,
-    //          --md-sys-color-on-primary,
-    //          --md-sys-color-on-primary,
-    //          --md-sys-color-on-primary,
-    //          --md-sys-color-on-primary,
-    //          --md-sys-color-on-primary,
-    //          --md-sys-color-on-primary,
-    //          --md-sys-color-on-primary,
-    //        );
-    //      }
-    //    }
-    //
-    //    &-left {
-    //      order: 1;
-    //
-    //      .page-header__menu-button {
-    //        @include responsiveGapForList(true, false, 'padding-left');
-    //        @include responsiveGapForList(false, false, 'padding-right');
-    //
-    //        &:first-of-type {
-    //          md-ripple {
-    //            @include responsiveGapForList(false, false, 'margin-left');
-    //          }
-    //        }
-    //      }
-    //    }
-    //
-    //    &-right {
-    //      justify-content: flex-end;
-    //
-    //      .page-header__menu-button {
-    //        @include responsiveGapForList(false, false, 'padding-left');
-    //        @include responsiveGapForList(false, true, 'padding-right');
-    //
-    //        &:last-of-type {
-    //          md-ripple {
-    //            @include responsiveGapForList(false, false, 'margin-right');
-    //          }
-    //        }
-    //      }
-    //    }
-    //  }
-    //
-    //  &-button {
-    //    @include fontUi();
-    //
-    //    position: relative;
-    //    display: flex;
-    //    align-items: center;
-    //    justify-content: center;
-    //    height: $headerHeight;
-    //
-    //    color: var(--md-sys-color-on-primary);
-    //    font-size: 14px;
-    //    line-height: 20px;
-    //    text-decoration: none;
-    //    text-transform: uppercase;
-    //    text-align: center;
-    //    letter-spacing: 0.1px;
-    //    font-weight: 500;
-    //
-    //    &.--active {
-    //      text-decoration: underline;
-    //      text-decoration-thickness: 2px;
-    //      text-underline-offset: 2px;
-    //    }
-    //  }
-    //}
   }
 }
 
@@ -303,63 +234,6 @@ $searchSurfaceMaxHeight: 80vh;
 
     display: flex;
     flex-direction: row;
-  }
-}
-
-// custom search banner customizations
-.custom-search-banner-wrap {
-  margin: 0 auto !important;
-  max-width: unset;
-  color: var(--primary);
-  h1 {
-    font-size: 4em;
-  }
-  p {
-    font-size: 1.25em !important;
-    font-weight: bold;
-    margin-bottom: 1em;
-  }
-  .btn {
-    height: 100%;
-  }
-  .search-menu input[type="text"] {
-    border: 1px solid transparent;
-    border-radius: 0.25em;
-    min-height: 40px;
-    &:focus {
-      outline: 3px solid rgba(var(--primary-rgb), 0.35);
-    }
-  }
-  .widget-link.show-help {
-    color: rgba(var(--primary-rgb), 0.75);
-    border-radius: 0.5em;
-    padding: 0.5em;
-    background-color: rgba(var(--secondary-rgb), 0.25);
-    &:hover {
-      color: var(--primary);
-    }
-  }
-  .search-menu .search-input {
-    border-color: var(--tertiary-hover);
-    outline: 1px solid var(--tertiary-hover);
-  }
-  .results {
-    top: 43px;
-    border-radius: 0.25em;
-  }
-  .search-context {
-    top: 3.25em;
-    right: 1em;
-  }
-}
-
-.search-input {
-  border-radius: 0.25em;
-}
-
-.display-search-banner {
-  #main-outlet {
-    padding-top: 2em;
   }
 }
 
