@@ -423,7 +423,7 @@ html body #main-outlet {
 
 .nav-pills:not(.user-nav) > li a.active,
 .nav-pills:not(.user-nav) > li > a {
-  border-radius: 9999px;
+  border-radius: 4px;
 }
 
 .category-calendar {
@@ -432,13 +432,13 @@ html body #main-outlet {
   }
   background: var(--secondary);
   padding: 1em;
-  border-radius: 9999px;
+  border-radius: 4px;
   margin-bottom: 1em;
 }
 
 .discourse-post-event-upcoming-events {
   background: var(--secondary);
-  border-radius: 9999px;
+  border-radius: 4px;
   padding: 1em;
   margin-bottom: 1em;
 }
@@ -495,6 +495,7 @@ html body #main-outlet {
       border-radius: 32px;
       position: relative;
       background: var(--md-sys-color-surface-container);
+      border: none !important;
       overflow: hidden;
       &.visited {
         .discourse-tag {
@@ -510,7 +511,7 @@ html body #main-outlet {
       @include responsiveBorderRadius();
 
       &:hover {
-        background-color: var(--secondary);
+        background-color: var(--md-sys-color-surface-container-high);
         a.title:not(.badge-notification) {
           color: var(--primary) !important;
         }
