@@ -80,7 +80,7 @@ $searchSurfaceMaxHeight: 80vh;
   }
 
   .chat-header-icon {
-    .svg-icon {
+    .d-icon {
       color: white;
       width: 24px;
       height: 24px;
@@ -89,11 +89,14 @@ $searchSurfaceMaxHeight: 80vh;
       border: none !important;
       padding-top: 0 !important;
       padding-bottom: 0 !important;
+
+      @include responsiveGapForList(false, false, 'padding-left');
+      @include responsiveGapForList(false, false, 'padding-right');
     }
     a:hover {
       background: transparent !important;
-      .svg-icon {
-        color: white;
+      &>.d-icon {
+        color: white !important;
       }
     }
   }
