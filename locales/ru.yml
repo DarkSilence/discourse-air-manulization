@@ -28,4 +28,27 @@ ru:
           title: "Форум"
           text: "Форум"
           href: "https://steppe.manulization.com/"
-
+    footer:
+      buttons:
+        youtube:
+          text: "Манулизация в социальной сети YouTube"
+        instagram:
+          text: "Манулизация в социальной сети Instagram"
+        tiktok:
+          text: "Манулизация в социальной сети TikTok"
+        telegram:
+          text: "Манулизация в социальной сети Telegram"
+        facebook:
+          text: "Манулизация в социальной сети Facebook"
+        weibo:
+          text: "Манулизация в социальной сети Weibo"
+        tumblr:
+          text: "Манулизация в социальной сети Tumblr"
+        dzen:
+          text: "Манулизация в социальной сети Dzen"
+        vk:
+          text: "Манулизация в социальной сети VK"
+      copyright: "Created by Roman Paulov and Viktoriya Malyshko, © 2021–2024."
+      terms:
+        text: "Правила и условия"
+        href: "https://manulization.ru/legal/terms-and-conditions.html"

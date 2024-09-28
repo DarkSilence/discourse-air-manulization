@@ -28,3 +28,27 @@ en:
           title: "Community"
           text: "Community"
           href: "https://steppe.manulization.com/"
+    footer:
+      buttons:
+        youtube:
+          text: "Manulization on YouTube"
+        instagram:
+          text: "Manulization on Instagram"
+        tiktok:
+          text: "Manulization on TikTok"
+        telegram:
+          text: "Manulization on Telegram"
+        facebook:
+          text: "Manulization on Facebook"
+        weibo:
+          text: "Manulization on Weibo"
+        tumblr:
+          text: "Manulization on Tumblr"
+        dzen:
+          text: "Manulization on Dzen"
+        vk:
+          text: "Manulization on VK"
+      copyright: "Роман Паулов и Виктория Малышко, © 2021–2024."
+      terms:
+        text: "Terms and Conditions"
+        href: "https://manulization.com/legal/terms-and-conditions.html"
