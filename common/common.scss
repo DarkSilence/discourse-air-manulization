@@ -240,6 +240,12 @@ $searchSurfaceMaxHeight: 80vh;
   flex: unset;
 }
 
+.topic-list .topic-excerpt,
+.topic-list .num .badge-posts,
+.topic-list .num a {
+  color: var(--md-sys-color-on-background);
+}
+
 .badge-wrapper.box {
   border-radius: 0.25em;
   overflow: hidden;
@@ -290,7 +296,7 @@ $searchSurfaceMaxHeight: 80vh;
 }
 
 #site-text-logo {
-  color: var(--primary);
+  color: var(--secondary);
 }
 
 .mobile-view {
@@ -395,7 +401,7 @@ html body #main-outlet {
   margin-top: 30px;
   margin-bottom: 50px;
   background: var(--secondary);
-  border-radius: 1em;
+  border-radius: 32px;
   padding: 3em 3em 5%;
   max-width: 1150px;
   .archetype-regular & {
@@ -417,7 +423,7 @@ html body #main-outlet {
 
 .nav-pills:not(.user-nav) > li a.active,
 .nav-pills:not(.user-nav) > li > a {
-  border-radius: 0.5em;
+  border-radius: 9999px;
 }
 
 .category-calendar {
@@ -426,13 +432,13 @@ html body #main-outlet {
   }
   background: var(--secondary);
   padding: 1em;
-  border-radius: 8px;
+  border-radius: 9999px;
   margin-bottom: 1em;
 }
 
 .discourse-post-event-upcoming-events {
   background: var(--secondary);
-  border-radius: 8px;
+  border-radius: 9999px;
   padding: 1em;
   margin-bottom: 1em;
 }
@@ -487,7 +493,7 @@ html body #main-outlet {
       margin-bottom: 0.5em;
       background-color: var(--secondary);
       border: 1px solid rgba(var(--primary-rgb), 0.2);
-      border-radius: 1em;
+      border-radius: 32px;
       position: relative;
       transition: box-shadow 100ms ease-in-out;
       box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.05);
@@ -508,8 +514,7 @@ html body #main-outlet {
         background-color: var(--secondary);
         box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.1);
         border: 1px solid rgba(var(--primary-rgb), 0.3);
-        a.title:not(.badge-notification),
-        a.topic-excerpt {
+        a.title:not(.badge-notification) {
           color: var(--primary) !important;
         }
       }
@@ -592,7 +597,7 @@ html body #main-outlet {
       .avatar {
         width: 40px;
         height: 40px;
-        border-radius: 8px;
+        border-radius: 50%;
       }
       a.latest {
         .avatar {
@@ -640,7 +645,7 @@ html body #main-outlet {
   margin-top: 30px;
   margin-bottom: 50px;
   background: var(--secondary);
-  border-radius: 1em;
+  border-radius: 32px;
   padding: 3em 3em 5%;
   box-shadow: 0 24px 40px rgba(0, 0, 0, 0.07),
   0 10.8529px 24.1177px rgba(0, 0, 0, 0.0456112),
@@ -671,7 +676,7 @@ html body #main-outlet {
 }
 
 .quote-button {
-  border-radius: 0.5em;
+  border-radius: 9999px;
 }
 
 .topic-list tr.selected td:nth-child(2),
