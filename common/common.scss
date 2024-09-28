@@ -98,6 +98,17 @@ $searchSurfaceMaxHeight: 80vh;
       &>.d-icon {
         color: white !important;
       }
+
+      &:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background: var(--md-ripple-hover-color, var(--md-sys-color-on-surface, #1d1b20));
+        opacity: 0.08;
+      }
     }
   }
 
