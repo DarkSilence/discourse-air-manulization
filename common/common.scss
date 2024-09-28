@@ -13,7 +13,7 @@ $searchSurfaceMaxHeight: 80vh;
   --d-border-radius: 4px;
   --d-border-radius-large: 4px;
   --d-nav-pill-border-radius: var(--d-border-radius);
-  --d-button-border-radius: 9999px;
+  --d-button-border-radius: 4px;
   --d-input-border-radius: 4px;
   --d-button-transition: none;
 }
@@ -218,6 +218,7 @@ $searchSurfaceMaxHeight: 80vh;
   font-family: var(--md-sys-typescale-label-small-font-family-name);
   font-size: 12.25px;
   line-height: 20px;
+  border-radius: 9999px;
   &.btn-icon-text {
     padding: 10px 24px 10px 16px;
   }
