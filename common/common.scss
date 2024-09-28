@@ -242,7 +242,7 @@ $searchSurfaceMaxHeight: 80vh;
 
 .topic-list .topic-excerpt,
 .topic-list .num .badge-posts,
-.topic-list .num .post-activity {
+.topic-list .num .post-activity span {
   color: var(--md-sys-color-on-background);
 }
 
@@ -512,9 +512,6 @@ html body #main-outlet {
 
       &:hover {
         background-color: var(--md-sys-color-surface-container-high);
-        a.title:not(.badge-notification) {
-          color: var(--primary) !important;
-        }
       }
       .topic-list-data.main-link {
         width: 63%;
