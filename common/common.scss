@@ -242,7 +242,8 @@ $searchSurfaceMaxHeight: 80vh;
 
 .topic-list .topic-excerpt,
 .topic-list .num .badge-posts,
-.topic-list .num a {
+.topic-list .num a,
+.topic-list .num a span {
   color: var(--md-sys-color-on-background) !important;
 }
 
