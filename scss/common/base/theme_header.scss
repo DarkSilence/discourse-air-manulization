@@ -461,7 +461,9 @@ $buttonPadding: 16px;
 
   .icon {
     .chat-channel-unread-indicator {
-      border: none;
+      width: 10px;
+      height: 10px;
+      //border: none;
       top: 12px;
       right: 8px;
     }
