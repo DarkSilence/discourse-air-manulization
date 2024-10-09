@@ -119,8 +119,8 @@ $buttonPadding: 16px;
 //    border: 1px solid transparent;
 //    outline: none;
     img.avatar {
-      width: 24px;
-      height: 24px;
+      width: 32px;
+      height: 32px;
     }
     .discourse-no-touch &:hover,
     .discourse-no-touch &:focus {
@@ -497,6 +497,10 @@ $buttonPadding: 16px;
       opacity: 0.08;
     }
   }
+}
+
+.header-dropdown-toggle.current-user.user-menu-panel .btn-flat {
+  border: 0;
 }
 
 .home-logo-wrapper-outlet,
