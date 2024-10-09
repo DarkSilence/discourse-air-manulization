@@ -470,7 +470,7 @@ $buttonPadding: 16px;
     }
   }
 
-  a {
+  a, button {
     border: none !important;
     padding-top: 0 !important;
     padding-bottom: 0 !important;
@@ -479,7 +479,7 @@ $buttonPadding: 16px;
     @include responsiveGapForList(false, false, 'padding-right');
   }
 
-  a:hover {
+  a:hover, button:hover {
     background: transparent !important;
 
     & > .d-icon {
@@ -497,12 +497,6 @@ $buttonPadding: 16px;
       opacity: 0.08;
     }
   }
-}
-
-.header-dropdown-toggle.current-user.user-menu-panel .btn-flat {
-  border: 0;
-  padding-top: 0;
-  padding-bottom: 0;
 }
 
 .home-logo-wrapper-outlet,
