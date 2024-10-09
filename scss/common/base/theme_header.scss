@@ -470,7 +470,7 @@ $buttonPadding: 16px;
     }
   }
 
-  a, button {
+  a {
     border: none !important;
     padding-top: 0 !important;
     padding-bottom: 0 !important;
@@ -479,13 +479,32 @@ $buttonPadding: 16px;
     @include responsiveGapForList(false, false, 'padding-right');
   }
 
-  a:hover, button:hover {
+  a:hover {
     background: transparent !important;
 
     & > .d-icon {
       color: white !important;
     }
 
+    &:before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      background: var(--md-ripple-hover-color, var(--md-sys-color-on-surface, #1d1b20));
+      opacity: 0.08;
+    }
+  }
+}
+
+.header-dropdown-toggle.current-user.user-menu-panel .btn-flat {
+  border: 0;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+
+  &:hover {
     &:before {
       content: "";
       position: absolute;
