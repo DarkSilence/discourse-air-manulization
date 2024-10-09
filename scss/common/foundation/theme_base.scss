@@ -1,0 +1,16 @@
+// These CSS custom properties are added here instead of in variables.scss
+// because variables.scss is injected into every theme CSS file
+// which causes problems when overriding custom properties in themes
+
+:root {
+  --d-border-radius: 4px;
+  --d-border-radius-large: 4px;
+  --d-nav-pill-border-radius: var(--d-border-radius);
+  --d-button-border-radius: 9999px;
+  --d-input-border-radius: 4px;
+  --d-content-background: initial;
+  --d-font-family--monospace: Consolas, Menlo, Monaco, "Lucida Console",
+    "Liberation Mono", "DejaVu Sans Mono", "Bitstream Vera Sans Mono",
+    "Courier New", monospace;
+  --d-button-transition: none;
+}
