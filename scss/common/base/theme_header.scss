@@ -505,7 +505,6 @@ $buttonPadding: 16px;
   justify-content: center;
   height: $headerHeight;
 
-  color: var(--md-sys-color-on-primary);
   font-size: 14px;
   line-height: 20px;
   text-decoration: none;
@@ -519,6 +518,17 @@ $buttonPadding: 16px;
     text-decoration-thickness: 2px;
     text-underline-offset: 2px;
   }
+
+  @include colorizeLinks(
+    --md-sys-color-on-primary,
+    --md-sys-color-on-primary,
+    --md-sys-color-on-primary,
+    --md-sys-color-on-primary,
+    --md-sys-color-on-primary,
+    --md-sys-color-on-primary,
+    --md-sys-color-on-primary,
+    --md-sys-color-on-primary,
+  );
 
   @include responsiveGapForList(false, false, 'padding-left');
   @include responsiveGapForList(false, false, 'padding-right');
