@@ -5,10 +5,21 @@
   line-height: 20px;
 }
 
-.btn-icon-text {
+.btn-icon-text,
+.btn-text,
+.btn-default {
   padding: 10px 24px;
 }
 
-.btn-text {
-  padding: 10px 24px;
+.content-languages-dropdown {
+  .btn {
+    width: 40px;
+    height: 40px;
+    border: none;
+    justify-content: center;
+
+    .select-kit-header-wrapper {
+      justify-content: center;
+    }
+  }
 }
