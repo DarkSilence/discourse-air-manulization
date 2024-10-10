@@ -12,6 +12,12 @@
 @import "common/base/theme_topic-list";
 @import "common/base/theme_header";
 
+#reply-control {
+  .content-languages-selector {
+    display: none;
+  }
+}
+
 //.d-header {
 //  display: flex;
 //  align-items: center;
