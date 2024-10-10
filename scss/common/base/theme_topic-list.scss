@@ -6,6 +6,7 @@
   }
 }
 
+.topic-list-item.visited .topic-list-data a.title:not(.badge-notification), .latest-topic-list-item.visited a.title:not(.badge-notification), .category-topic-link.visited a.title:not(.badge-notification),
 .anon .topic-list-main-link a.title:visited:not(.badge-notification), .anon .latest-topic-list-item .main-link a.title:visited:not(.badge-notification), .latest-topic-list-item .anon .main-link a.title:visited:not(.badge-notification), .anon .topic-list .main-link a.title:visited:not(.badge-notification), .topic-list .anon .main-link a.title:visited:not(.badge-notification) {
   @include colorizeLinks(
     --md-sys-color-on-surface,
