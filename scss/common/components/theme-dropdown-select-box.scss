@@ -1,0 +1,23 @@
+.select-kit {
+  &.single-select {
+    &.dropdown-select-box {
+      .select-kit-body {
+        border: none;
+      }
+
+      .select-kit-row {
+        .texts {
+          .name {
+            font-family: var(--md-sys-typescale-label-small-font-family-name);
+            font-size: 12.25px;
+            line-height: 20px;
+          }
+        }
+      }
+
+      .select-kit-header {
+        padding: 10px 24px;
+      }
+    }
+  }
+}
