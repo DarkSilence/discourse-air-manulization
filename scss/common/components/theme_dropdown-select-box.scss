@@ -3,12 +3,10 @@
     &.dropdown-select-box {
       .select-kit-header {
         padding: 10px 24px;
-        .texts {
-          .name {
-            font-family: var(--md-sys-typescale-label-small-font-family-name);
-            font-size: 12.25px;
-            line-height: 20px;
-          }
+        .name {
+          font-family: var(--md-sys-typescale-label-small-font-family-name);
+          font-size: 12.25px;
+          line-height: 20px;
         }
       }
     }
