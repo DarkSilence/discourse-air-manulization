@@ -1,0 +1,20 @@
+@import "includes/mixins";
+
+.topic-list {
+  .topic-excerpt {
+    color: var(--md-sys-color-on-surface);
+  }
+}
+
+.anon .topic-list-main-link a.title:visited:not(.badge-notification), .anon .latest-topic-list-item .main-link a.title:visited:not(.badge-notification), .latest-topic-list-item .anon .main-link a.title:visited:not(.badge-notification), .anon .topic-list .main-link a.title:visited:not(.badge-notification), .topic-list .anon .main-link a.title:visited:not(.badge-notification) {
+  @include colorizeLinks(
+    --md-sys-color-on-surface,
+    --md-sys-color-on-surface,
+    --md-sys-color-on-surface,
+    --md-sys-color-on-surface,
+    --md-sys-color-on-surface,
+    --md-sys-color-on-surface,
+    --md-sys-color-on-surface,
+    --md-sys-color-on-surface,
+  );
+}
