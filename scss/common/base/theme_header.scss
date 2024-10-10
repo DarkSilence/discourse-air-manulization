@@ -17,7 +17,15 @@ $buttonPadding: 16px;
   > .wrap {
     max-width: unset !important;
     --d-wrap-padding-h: 0;
-    @include responsiveGap('padding-left', 'padding-right');
+
+    @include mq($until: medium) {
+      padding-left: 8px;
+      padding-right: 8px;
+    }
+    @include mq($from: medium) {
+      padding-left: 11px;
+      padding-right: 11px;
+    }
   }
 
   .title {
