@@ -12,8 +12,10 @@
 }
 
 .btn-icon {
-  width: 40px;
-  height: 40px;
+  &:not(.select-kit-header) {
+    width: 40px;
+    height: 40px;
+  }
 }
 
 .content-languages-dropdown {
