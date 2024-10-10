@@ -516,6 +516,11 @@ $buttonPadding: 16px;
   padding-top: 0 !important;
   padding-bottom: 0 !important;
 
+  .badge-notification {
+    font-family: var(--font-family) !important;
+    top: 8px;
+  }
+
   &:hover {
     &:before {
       content: "";
