@@ -17,6 +17,7 @@ $buttonPadding: 16px;
   > .wrap {
     max-width: unset !important;
     --d-wrap-padding-h: 0;
+    @include responsiveGap('padding-left', 'padding-right');
   }
 
   .title {
@@ -214,7 +215,10 @@ $buttonPadding: 16px;
 //
 .header-sidebar-toggle {
   order: 0;
-//  button {
+  button {
+    @include responsiveGapForList(false, false, 'padding-left');
+    @include responsiveGapForList(false, false, 'padding-right');
+
 //    margin-right: 1em;
 //    box-sizing: content-box; // matches other header icons
 //    display: flex;
@@ -235,7 +239,7 @@ $buttonPadding: 16px;
 //      display: inline-block;
 //      color: var(--header_primary-low-mid);
 //    }
-//  }
+  }
 }
 //
 //// topic info in the header
