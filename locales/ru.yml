@@ -31,7 +31,7 @@ ru:
         profile:
           title: "Войти"
           text: "Войти"
-          href: "https://steppe.manulization.com/session/sso"
+          href: "https://steppe.manulization.com/session/sso?redirect_url=/"
     footer:
       buttons:
         youtube:

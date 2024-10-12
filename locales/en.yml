@@ -31,7 +31,7 @@ en:
         profile:
           title: "Sign In"
           text: "Sign In"
-          href: "https://steppe.manulization.com/session/sso"
+          href: "https://steppe.manulization.com/session/sso?redirect_url=/"
     footer:
       buttons:
         youtube:
