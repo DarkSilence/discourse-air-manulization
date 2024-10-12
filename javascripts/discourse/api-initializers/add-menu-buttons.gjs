@@ -10,4 +10,14 @@ export default apiInitializer("1.0", (api) => {
     </template>,
     { before: "chat" }
   );
+
+  if (!api.getCurrentUser()) {
+    api.headerIcons.add(
+      "community-link-menu",
+      <template>
+        <li class="d-header-community-element"><a href="https://steppe.manulization.com/session/sso" title="{{i18n (themePrefix "js.menu.buttons.profile.title")}}" class="d-header-menu-button"><md-ripple></md-ripple><md-icon>person</md-icon></a></li>
+      </template>,
+      { after: "search" }
+    );
+  }
 });
