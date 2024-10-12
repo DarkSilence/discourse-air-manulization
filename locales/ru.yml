@@ -28,6 +28,10 @@ ru:
           title: "Степь"
           text: "Степь"
           href: "https://steppe.manulization.com/"
+        profile:
+          title: "Войти"
+          text: "Войти"
+          href: "https://steppe.manulization.com/session/sso"
     footer:
       buttons:
         youtube:

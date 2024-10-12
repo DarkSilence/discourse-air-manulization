@@ -28,6 +28,10 @@ en:
           title: "Steppe"
           text: "Steppe"
           href: "https://steppe.manulization.com/"
+        profile:
+          title: "Sign In"
+          text: "Sign In"
+          href: "https://steppe.manulization.com/session/sso"
     footer:
       buttons:
         youtube:
