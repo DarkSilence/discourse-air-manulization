@@ -22,6 +22,10 @@
   //padding: 0 !important;
 }
 
+.custom-category-boxes:not(.above-discovery-categories-outlet) .category-box .category-box-inner {
+  gap: 22px;
+}
+
 //.d-header {
 //  display: flex;
 //  align-items: center;
