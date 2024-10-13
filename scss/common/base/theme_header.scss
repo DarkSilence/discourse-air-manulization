@@ -165,6 +165,16 @@ $buttonPadding: 16px;
 //      background-color: var(--primary-low);
 //    }
   }
+
+  .header-dropdown-toggle {
+    &.search-dropdown {
+      order: 6;
+    }
+
+    &.current-user {
+      order: 5;
+    }
+  }
 //  .drop-down-mode & {
 //    .active .icon {
 //      position: relative;
