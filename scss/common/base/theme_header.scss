@@ -12,7 +12,26 @@ $buttonPadding: 16px;
   backdrop-filter: saturate(100%) blur(5px);
   transform: translateZ(0px);
   background-color: rgba(var(--header_background-rgb), 0.75);
+  border-bottom: 1px solid rgba(155, 97, 39, 0.7);
   box-shadow: none;
+
+  @media (prefers-color-scheme: dark) {
+    background-color: rgba(#FFB77C, 0.75);
+    border-bottom: 1px solid rgba(155, 97, 39, 0.7);
+
+    a {
+        @include colorizeLinks(
+            --md-sys-color-on-primary-dark,
+            --md-sys-color-on-primary-dark,
+            --md-sys-color-on-primary-dark,
+            --md-sys-color-on-primary-dark,
+            --md-sys-color-on-primary-dark,
+            --md-sys-color-on-primary-dark,
+            --md-sys-color-on-primary-dark,
+            --md-sys-color-on-primary-dark,
+        );
+    }
+  }
 
   > .wrap {
     max-width: unset !important;
