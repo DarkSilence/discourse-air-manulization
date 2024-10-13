@@ -519,6 +519,10 @@ $buttonPadding: 16px;
 
     & > .d-icon {
       color: white !important;
+
+      @media (prefers-color-scheme: dark) {
+        color: var(--md-sys-color-on-primary-dark);
+      }
     }
 
     &:before {
