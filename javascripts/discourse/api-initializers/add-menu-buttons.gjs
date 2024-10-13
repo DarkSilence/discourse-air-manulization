@@ -11,7 +11,6 @@ export default apiInitializer("1.0", (api) => {
     { before: "chat" }
   );
 
-  api.headerIcons.reposition("user-menu", { before: "search" })
 
   if (!api.getCurrentUser()) {
     api.headerIcons.add(
@@ -21,5 +20,7 @@ export default apiInitializer("1.0", (api) => {
       </template>,
       { before: "search" }
     );
+  } else {
+    api.headerIcons.reposition("user-menu", { before: "search", after: "chat" });
   }
 });
