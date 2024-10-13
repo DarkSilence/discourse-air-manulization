@@ -11,11 +11,13 @@ export default apiInitializer("1.0", (api) => {
     { before: "chat" }
   );
 
+  api.headerIcons.reposition("user-menu", { before: "search" })
+
   if (!api.getCurrentUser()) {
     api.headerIcons.add(
       "community-link-menu",
       <template>
-        <li class="d-header-community-element header-dropdown-toggle current-user"><a href="/login" title="{{i18n (themePrefix "js.menu.buttons.profile.title")}}" class="d-header-menu-button"><md-ripple></md-ripple><md-icon>person</md-icon></a></li>
+        <li class="d-header-community-element"><a href="/login" title="{{i18n (themePrefix "js.menu.buttons.profile.title")}}" class="d-header-menu-button"><md-ripple></md-ripple><md-icon>person</md-icon></a></li>
       </template>,
       { before: "search" }
     );
