@@ -7,8 +7,7 @@ export default apiInitializer("1.0", (api) => {
     "community-link-menu",
     <template>
       <li class="d-header-community-element"><a href="{{i18n (themePrefix "js.menu.buttons.community.href")}}" title="{{i18n (themePrefix "js.menu.buttons.community.title")}}" class="d-header-menu-button --active"><md-ripple></md-ripple>{{i18n (themePrefix "js.menu.buttons.community.text")}}</a></li>
-    </template>,
-    { before: "chat" }
+    </template>
   );
 
 
