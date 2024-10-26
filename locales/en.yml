@@ -28,6 +28,10 @@ en:
           title: "Steppe"
           text: "Steppe"
           href: "https://steppe.manulization.com/"
+        contacts:
+          title: "Get in touch with Manulization"
+          text: "Contacts"
+          href: "https://manulization.com/contacts"
         profile:
           title: "Sign In"
           text: "Sign In"

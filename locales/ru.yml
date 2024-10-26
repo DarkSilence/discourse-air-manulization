@@ -28,6 +28,10 @@ ru:
           title: "Степь"
           text: "Степь"
           href: "https://steppe.manulization.com/"
+        contacts:
+          title: "Связаться с нами"
+          text: "Контакты"
+          href: "https://manulization.ru/contacts"
         profile:
           title: "Войти"
           text: "Войти"
