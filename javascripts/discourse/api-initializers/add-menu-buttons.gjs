@@ -6,7 +6,7 @@ export default apiInitializer("1.0", (api) => {
   api.headerIcons.add(
     "contacts",
     <template>
-      <li class="d-header-community-element"><a href="{{i18n (themePrefix "js.menu.buttons.contacts.href")}}" title="{{i18n (themePrefix "js.menu.buttons.contacts.title")}}" class="d-header-menu-button --active"><md-ripple></md-ripple>{{i18n (themePrefix "js.menu.buttons.contacts.text")}}</a></li>
+      <li class="d-header-community-element"><a href="{{i18n (themePrefix "js.menu.buttons.contacts.href")}}" title="{{i18n (themePrefix "js.menu.buttons.contacts.title")}}" class="d-header-menu-button"><md-ripple></md-ripple>{{i18n (themePrefix "js.menu.buttons.contacts.text")}}</a></li>
     </template>,
     { before: "chat" }
   );
