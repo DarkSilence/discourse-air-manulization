@@ -56,6 +56,8 @@ en:
           text: "Manulization on Dzen"
         vk:
           text: "Manulization on VK"
+        x_twitter:
+          text: "Manulization on X (Twitter)"
       copyright: "Created by Roman Paulov and Viktoriya Malyshko, © 2021–2024."
       terms:
         text: "Terms and Conditions"
