@@ -49,6 +49,6 @@ export default apiInitializer("1.0.0", (api) => {
     );
     api.headerIcons.reposition("community", { before: "user-menu-placeholder" });
   } else {
-    api.headerIcons.reposition("user-menu", { before: "search", after: "chat" });
+    api.headerIcons.reposition("user-menu", { after: "chat" });
   }
 });
