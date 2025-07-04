@@ -60,6 +60,13 @@ $buttonPadding: 16px;
   //
   .home-logo-wrapper-outlet {
     order: 2;
+    flex: 0 0 auto;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
   //  overflow: hidden;
   }
   //
@@ -475,6 +482,7 @@ $buttonPadding: 16px;
   display: flex;
   align-items: center;
   flex: 1 1 0;
+  justify-content: flex-start;
 
   @include mq($until: medium) {
     display: none !important;
