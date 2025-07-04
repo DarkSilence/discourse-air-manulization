@@ -1,18 +1,16 @@
-import { withPluginApi } from "discourse/lib/plugin-api";
+import { registerRawHelper } from "discourse-common/lib/helpers";
 
 export default {
-  name: 'header-initializer',
+  name: 'handlebars-helpers-initializer',
 
   initialize() {
-    withPluginApi("0.8.14", (api) => {
-      api.onAppEvent('mount:composer', () => {
-        Handlebars.registerHelper('getLocale', function(options) {
-          return I18n.currentLocale();
-        });
-        Handlebars.registerHelper('getBaseDomain', function(options) {
-          return new Handlebars.SafeString(I18n.currentLocale() === 'ru' ? 'manulization.ru' : 'manulization.com');
-        });
-      });
+    // Register helpers using the modern API
+    registerRawHelper("getLocale", () => {
+      return I18n.currentLocale();
+    });
+    
+    registerRawHelper("getBaseDomain", () => {
+      return I18n.currentLocale() === 'ru' ? 'manulization.ru' : 'manulization.com';
     });
   }
 };
